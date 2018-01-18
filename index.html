@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <title>Template de E-commerce</title>
+</head>
+
+<body>
+
+    <h1 class="container">Template de E-commerce</h1>
+
+    <main class="container row">
+        <a class="col s6 m4 l3 container" href="dist/home.html">
+            <div class="card">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span>home</span>
+            </div>
+        </a>
+    </main>
+
+    <footer class="container">
+        <a href="" class="btn">
+            <i class="fa fa-download" aria-hidden="true"></i> Baixar Site
+        </a>
+
+        <a href="" class="btn">
+            <i class="fa fa-github" aria-hidden="true"></i> Repositório Github
+        </a>
+
+        <a href="https://jonatanlins.github.io" class="btn">
+            <i class="fa fa-code" aria-hidden="true"></i> Conheça o Autor
+        </a>
+
+        <br><h3>Site feito por Jonatan Lins</h3>
+    </footer>
+
+</body>
+    <style>
+        main{padding: 50px 0}
+        h1{padding: .8em .75rem 0}
+        .card{width: 100%; text-align: center; color: #FFF; background-color: #3498db; padding: 1em 0; cursor: pointer; transition: all .2s ease}
+        .card:hover{color: #3498db; background-color: #FFF}
+        .card.disabled{color: #aaa; background-color: #eee; cursor: default}
+        .card.disabled:hover *{opacity: 0}
+        .card.disabled:hover:before{content: "Esta página ainda não foi finalizada"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)}
+        .card i{display: block; font-size: 5em; margin-bottom: .3em}
+        .card span{text-decoration: none; color: inherit; text-transform: capitalize; font-weight: bold; white-space: nowrap}
+        footer{display: flex; flex-wrap: wrap; justify-content: center}
+        footer .btn, footer .btn:hover{background-color: #3498db; margin: 10px; text-transform: none; font-size: 1.1rem}
+        footer h3{font-size: 1rem; width: 100%; text-align: center}
+    </style>
+</html>

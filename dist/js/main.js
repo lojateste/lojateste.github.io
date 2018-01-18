@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".open-side-nav").sideNav({menuWidth:250}),$(".search-bar .search-btn").click(function(){$(".search-bar").addClass("active")}),$(document).click(function(e){0==$(e.target).closest(".search-bar").length&&$(".search-bar").removeClass("active").children("input").val("")})});
