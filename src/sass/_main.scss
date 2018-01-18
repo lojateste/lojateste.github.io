@@ -1,5 +1,5 @@
 @import 'materialize';
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import 'material-icons';
 
 :root {
   overflow-x: hidden;
@@ -107,13 +107,21 @@ h2 {
 }
 
 .product-card {
+  margin: .5rem;
+
+  .card-content{
+    position: relative;
+  }
+
   .product-price {
     font-size: 2rem;
+    white-space: nowrap;
   }
 
   .product-old-price {
     text-decoration: line-through;
     color: #888;
+    white-space: nowrap;
   }
 
   .card-action a {
