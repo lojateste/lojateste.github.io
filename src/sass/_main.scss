@@ -1,33 +1,34 @@
-@import '../../node_modules/materialize-css/sass/materialize';
+@import 'materialize';
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
-*{
-  color: #444;
+:root {
+  overflow-x: hidden;
+  height: 100%;
 }
 
-.spacer{
+.spacer {
   flex: 1 1 auto !important;
 }
 
 #header {
   user-select: none;
 
-  .top-bar{
-    background: url(../img/banners/banner-02.jpg) no-repeat center;
+  .top-bar {
+    background: url("../img/banners/main-banner.jpg") no-repeat center;
     background-size: cover;
 
-    .container{
+    .container {
       display: flex;
       justify-content: space-between;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
 
-      .btn{
+      .btn {
         padding: 0 1em;
       }
     }
   }
 
-  .store-logo{
+  .store-logo {
     margin: 2rem 0;
     max-width: 90%;
   }
@@ -43,13 +44,13 @@
       }
     }
 
-    .brand-logo{
+    .brand-logo {
       padding: 8px 0;
       height: 100%;
       left: auto;
       transform: none;
 
-      img{
+      img {
         height: 100%;
       }
     }
@@ -93,6 +94,34 @@
       box-shadow: none;
     }
   }
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #444;
+  padding: 0.5em 1em;
+  @extend .grey;
+  @extend .lighten-2;
+  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.3);
+}
+
+.product-card {
+  .product-price {
+    font-size: 2rem;
+  }
+
+  .product-old-price {
+    text-decoration: line-through;
+    color: #888;
+  }
+
+  .card-action a {
+    color: #444 !important;
+  }
+}
+
+#main {
+  margin: 3rem 0;
 }
 
 .side-nav {
