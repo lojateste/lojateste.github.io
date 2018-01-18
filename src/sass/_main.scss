@@ -100,6 +100,7 @@ h2 {
   font-size: 1.5rem;
   color: #444;
   padding: 0.5em 1em;
+  margin-top: 4rem;
   @extend .grey;
   @extend .lighten-2;
   box-shadow: inset 0 -2px rgba(255, 255, 255, 0.3);
@@ -118,10 +119,6 @@ h2 {
   .card-action a {
     color: #444 !important;
   }
-}
-
-#main {
-  margin: 3rem 0;
 }
 
 .side-nav {
