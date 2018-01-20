@@ -3,3 +3,18 @@
 @import 'owl.theme.default.scss';
 @import 'owl.carousel.scss';
 @import 'main';
+
+
+//
+// MEDIA QUERIES
+//
+@media #{$small-and-down}{
+  .owl-carousel{
+    width: 100vw;
+    margin-left: -5vw;
+
+    .product-card{
+      margin: .5rem 6vw;
+    }
+  }
+}

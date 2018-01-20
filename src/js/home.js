@@ -7,7 +7,7 @@ $(document).ready(function() {
     400: {
       items: 2
     },
-    600: {
+    601: {
       items: 3
     },
     1200: {
@@ -30,6 +30,8 @@ $(document).ready(function() {
   $('.owl-carousel.best-sellers').owlCarousel({
     loop: true,
     margin: 10,
+    autoplay: true,
+    autoplayTimeout: 6000,
     // nav: true,
     responsive: responsiveCarousel
   })

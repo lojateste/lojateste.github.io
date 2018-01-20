@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Gatilhos do Materialize
   $(".open-side-nav").sideNav({
-    menuWidth: 250
+    menuWidth: 280
   })
 
   // Barra de pesquisa no menu superior
