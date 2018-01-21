@@ -10,6 +10,9 @@
   flex: 1 1 auto !important;
 }
 
+.card.horizontal {.card-image{
+  max-width: 40%;
+}}
 #header {
   user-select: none;
 
@@ -35,57 +38,48 @@
   top: 0;
   z-index: 50;
 
-  > ul,
-  > .container > ul {
-    > li > a {
-      margin: 0;
-    }
-  }
-
-  .logo{
+  .logo {
     font-size: 1.8rem;
 
-    i{
+    i {
       font-size: 2.5rem;
     }
   }
 
-  >.container{
+  > .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
 
-    .action-bar{
+    .action-bar {
       flex: 1 0 auto;
       display: flex;
       justify-content: flex-end;
+
+      .home-btn {
+        transform: scale(2);
+      }
     }
   }
 
   .search-bar {
     position: relative;
+    background-color: transparent;
 
     input[type=text] {
       color: #444;
       border: none;
-      border-radius: 2px;
-      padding: 0.8em 0;
+      border-radius: 200px;
+      padding: 0.8em 4em 0.8em 1.5em;
       outline: none;
-      margin: 0;
-      width: 0;
+      width: 15rem;
       transition: all 0.2s ease;
     }
 
-    &.active {
-      background-color: transparent;
+    .search-btn {
+      margin-left: -48px;
 
-      input[type=text] {
-        width: 15em;
-        padding-left: 1em;
-        padding-right: 4em;
-        margin-right: -3.1em;
-      }
-
-      .search-btn .fa {
+      .fa {
         color: #666;
 
         &:hover {
@@ -112,8 +106,17 @@ h2 {
 }
 
 .product-card {
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
 
+  .card-image{
+    .card-title{
+      background-color: rgba(0,0,0,.7);
+      font-size: 1.3em;
+      border-radius: 2px;
+      padding: 5px 12px;
+      margin: 20px 10px;
+    }
+  }
   .card-content {
     position: relative;
   }
@@ -162,22 +165,31 @@ h2 {
     }
   }
 }
+
+.page-footer {
+  margin-top: 5rem;
+
+  .btn-floating {
+    margin: 0 1rem 2rem;
+  }
+}
 //
 // MEDIA QUERIES
 //
-@media #{$large-and-up} {
-  #header {
-    .nav-wrapper {
-      > ul,
-      > .container > ul {
-        > li > a {
-          margin: -2px 15px;
-        }
-      }
+@media #{$small-and-down} {
+  .nav-wrapper {
+    height: 112px;
 
-      .search-bar.active input[type=text] {
-        margin-right: -4.5em;
+    .search-bar {
+      position: absolute;
+      right: 0;
+      top: 56px;
+
+      input[type=text] {
+        width: 20rem;
+        max-width: 85vw;
       }
     }
   }
 }
+@media #{$large-and-up} {}

@@ -4,7 +4,7 @@ $(document).ready(function() {
     0: {
       items: 1
     },
-    400: {
+    450: {
       items: 2
     },
     601: {
