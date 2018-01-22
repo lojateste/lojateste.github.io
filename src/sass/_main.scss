@@ -10,9 +10,16 @@
   flex: 1 1 auto !important;
 }
 
-.card.horizontal {.card-image{
-  max-width: 40%;
-}}
+.blue-gradient{
+  background-color: #1976D2;
+  background: linear-gradient(to right, #396afc, #2948ff);
+}
+.card.horizontal {
+  .card-image {
+    max-width: 40%;
+  }
+}
+
 #header {
   user-select: none;
 
@@ -78,13 +85,19 @@
 
     .search-btn {
       margin-left: -48px;
+      border: none;
+      background-color: transparent;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 0;
+      right: 10px;
 
       .fa {
         color: #666;
+      }
 
-        &:hover {
-          color: #1976D2;
-        }
+      &:hover .fa {
+        color: #1976D2;
       }
     }
   }
@@ -108,8 +121,8 @@ h2 {
 .product-card {
   margin: 1rem 0.5rem;
 
-  .card-image{
-    .card-title{
+  .card-image {
+    .card-title {
       background-color: rgba(0,0,0,.7);
       font-size: 1.3em;
       border-radius: 2px;
@@ -117,6 +130,11 @@ h2 {
       margin: 20px 10px;
     }
   }
+
+  .btn-floating{
+    @extend .blue-gradient;
+  }
+
   .card-content {
     position: relative;
   }
@@ -183,11 +201,14 @@ h2 {
     .search-bar {
       position: absolute;
       right: 0;
+      left: 0;
       top: 56px;
+      width: 20rem;
+      max-width: 85vw;
+      margin: 0 auto;
 
       input[type=text] {
-        width: 20rem;
-        max-width: 85vw;
+        width: 100%;
       }
     }
   }

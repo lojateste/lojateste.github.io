@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+@import 'owl.theme.default.scss';
+@import 'owl.carousel.scss';
+@import 'main';
+
+.product-details {
+  position: relative;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .product-rating {
+    font-size: 1.5rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+  }
+
+  .product-price {
+    font-size: 2.5rem;
+  }
+
+  .product-old-price {
+    font-size: 1.5rem;
+    color: #aaa;
+    text-decoration: line-through;
+  }
+
+  .product-highlights {
+    li {
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      color: #1976D2;
+    }
+  }
+
+  label > span {
+    font-size: 1.5rem;
+    color: #444;
+  }
+
+  .input-field {
+    margin-top: 3rem;
+  }
+
+  input[name=item-qnt] {
+    width: 5rem;
+  }
+
+  .btn-cart {
+    position: absolute;
+    top: 13rem;
+    right: 0;
+  }
+
+  .btn-fav {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+  }
+}
+//
+// MEDIA QUERIES
+//
+@media #{$small-and-down} {}

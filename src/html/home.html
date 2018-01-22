@@ -27,7 +27,7 @@
   </header>
 
 
-  <nav class="nav-wrapper blue darken-2">
+  <nav class="nav-wrapper blue darken-2 blue-gradient">
     <div class="container">
       <ul class="action-bar">
         <li class="home-btn">
@@ -38,10 +38,12 @@
         <li class="spacer"></li>
 
         <li class="search-bar">
-          <input type="text" placeholder="Pesquisar..." class="browser-default z-depth-2">
-          <a class="search-btn btn-floating waves-effect waves-light">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </a>
+          <form action="">
+            <input type="text" placeholder="Pesquisar..." class="browser-default z-depth-2" name="search">
+            <button type="submit" class="search-btn">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
         </li>
         <li>
           <a href="carrinho.html" class="btn-floating waves-effect waves-light">
@@ -49,8 +51,8 @@
           </a>
         </li>
         <li>
-          <a href="favoritos.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-heart" aria-hidden="true"></i>
+          <a href="login.html" class="btn-floating waves-effect waves-light">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
           </a>
         </li>
         <li>
@@ -63,7 +65,7 @@
   </nav>
 
   <aside>
-    <ul id="side-nav" class="side-nav blue darken-3">
+    <ul id="side-nav" class="side-nav blue darken-3 blue-gradient">
       <li class="title">Categorias</li>
       <li><a href="#!">Computadores</a></li>
       <li class="no-padding">
@@ -95,7 +97,7 @@
       <!-- Ofertas Imperdíveis -->
       <h2>Ofertas Imperdíveis!</h2>
 
-      <div class="owl-carousel featured-items">
+      <div class="owl-carousel featured-items owl-theme">
         <div class="product-card hoverable card">
           <div class="card-image">
             <img src="img/products/7-PROTECAOELETRICA.jpg" alt="" class="product-img">
@@ -105,8 +107,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -122,8 +124,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -139,8 +141,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -156,8 +158,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -178,8 +180,8 @@
             <div class="card-stacked">
               <div class="card-content">
                 <span class="card-title">HD Interno</span>
-                <span class="product-price">R$ 00,00</span>
-                <span class="product-old-price">R$ 00,00</span>
+                <span class="product-price">R$ 49,99</span>
+                <span class="product-old-price">R$ 64,99</span>
                 <a class="btn-floating halfway-fab waves-effect waves-light blue darken-2">
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
@@ -199,8 +201,8 @@
             <div class="card-stacked">
               <div class="card-content">
                 <span class="card-title">Memória RAM</span>
-                <span class="product-price">R$ 00,00</span>
-                <span class="product-old-price">R$ 00,00</span>
+                <span class="product-price">R$ 49,99</span>
+                <span class="product-old-price">R$ 64,99</span>
                 <a class="btn-floating halfway-fab waves-effect waves-light blue darken-2">
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
@@ -220,8 +222,8 @@
             <div class="card-stacked">
               <div class="card-content">
                 <span class="card-title">Mesa Digitalizadora</span>
-                <span class="product-price">R$ 00,00</span>
-                <span class="product-old-price">R$ 00,00</span>
+                <span class="product-price">R$ 49,99</span>
+                <span class="product-old-price">R$ 64,99</span>
                 <a class="btn-floating halfway-fab waves-effect waves-light blue darken-2">
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
@@ -239,7 +241,7 @@
       <!-- Produtos -->
       <h2>Produtos Mais Vendidos!</h2>
 
-      <div class="owl-carousel best-sellers">
+      <div class="owl-carousel best-sellers owl-theme">
         <div class="product-card hoverable card">
           <div class="card-image">
             <img src="img/products/2-PLACAVIDEO.jpg" alt="" class="product-img">
@@ -249,8 +251,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -266,8 +268,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -283,8 +285,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -300,8 +302,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -309,7 +311,7 @@
         </div>
       </div>
 
-      <div class="owl-carousel best-sellers">
+      <div class="owl-carousel best-sellers owl-theme">
         <div class="product-card hoverable card">
           <div class="card-image">
             <img src="img/products/4-PLACA-MAE.jpg" alt="" class="product-img">
@@ -319,8 +321,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -336,8 +338,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -353,8 +355,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -370,8 +372,8 @@
             </a>
           </div>
           <div class="card-content">
-            <span class="product-price">R$ 00,00</span>
-            <span class="product-old-price">R$ 00,00</span>
+            <span class="product-price">R$ 49,99</span>
+            <span class="product-old-price">R$ 64,99</span>
           </div>
           <div class="card-action">
             <a href="produto-detalhe.html">Ver detalhes</a>
@@ -384,7 +386,7 @@
   </main>
 
 
-  <footer class="page-footer center-align blue darken-2">
+  <footer class="page-footer center-align blue darken-2 blue-gradient">
     <div class="container">
       <a class="btn-floating btn-large waves-effect white">
         <i class="fa fa-facebook blue-text text-darken-2"></i>
