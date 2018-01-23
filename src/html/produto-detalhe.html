@@ -8,28 +8,16 @@
 </head>
 
 <body>
-  <header id="header">
-    <div class="top-bar">
-      <div class="container">
-        <span class="spacer"></span>
-        <span>
-          <a href="login.html" class="btn white grey-text text-darken-3">Registre-se</a>
-          <a href="login.html" class="btn white grey-text text-darken-3">Login</a>
-        </span>
-      </div>
 
-      <div class="container">
-        <a href="home.html" class="store-logo">
-          <img src="img/store/average-logo.png" alt="Sua Loja">
-        </a>
-      </div>
-    </div>
-  </header>
-
-
-  <nav class="nav-wrapper blue darken-2 blue-gradient">
+  <nav class="nav-wrapper blue-gradient">
     <div class="container">
       <ul class="action-bar">
+        <li>
+          <a class="open-side-nav btn-floating waves-effect waves-light" data-activates="side-nav">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </li>
+
         <li class="home-btn">
           <a href="home.html" class="btn-floating waves-effect waves-light">
             <i class="fa fa-home" aria-hidden="true"></i>
@@ -39,25 +27,23 @@
 
         <li class="search-bar">
           <form action="">
-            <input type="text" placeholder="Pesquisar..." class="browser-default z-depth-2" name="search">
+            <input type="text" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
             <button type="submit" class="search-btn">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
         </li>
+
         <li>
           <a href="carrinho.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
           </a>
         </li>
+
         <li>
           <a href="login.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a class="open-side-nav btn-floating waves-effect waves-light" data-activates="side-nav">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <!-- <i class="fa fa-sign-in" aria-hidden="true"></i> -->
+            Login
           </a>
         </li>
       </ul>
@@ -65,7 +51,7 @@
   </nav>
 
   <aside>
-    <ul id="side-nav" class="side-nav blue darken-3 blue-gradient">
+    <ul id="side-nav" class="side-nav blue-gradient">
       <li class="title">Categorias</li>
       <li><a href="#!">Computadores</a></li>
       <li class="no-padding">
@@ -114,11 +100,11 @@
             <h1>Capa para Notebook</h1>
 
             <div class="product-rating">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <i class="fa fa-heart-o" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
 
             <div class="product-price">R$ 49,99</div>
@@ -153,7 +139,7 @@
             </div>
 
             <label>
-              <span>Quantidade:</span> 
+              <span>Quantidade:</span>
               <input type="number" name="item-qnt">
             </label>
 
@@ -172,7 +158,7 @@
       <!-- Ofertas Imperdíveis -->
       <h2>Ofertas Imperdíveis!</h2>
 
-      <div class="owl-carousel featured-items">
+      <div class="owl-carousel featured-items owl-theme">
         <div class="product-card hoverable card">
           <div class="card-image">
             <img src="img/products/7-PROTECAOELETRICA.jpg" alt="" class="product-img">
@@ -247,7 +233,7 @@
   </main>
 
 
-  <footer class="page-footer center-align blue darken-2 blue-gradient">
+  <footer class="page-footer center-align blue-gradient">
     <div class="container">
       <a class="btn-floating btn-large waves-effect white">
         <i class="fa fa-facebook blue-text text-darken-2"></i>

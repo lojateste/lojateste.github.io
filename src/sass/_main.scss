@@ -10,33 +10,15 @@
   flex: 1 1 auto !important;
 }
 
-.blue-gradient{
+.blue-gradient {
   background-color: #1976D2;
-  background: linear-gradient(to right, #396afc, #2948ff);
+  // background: linear-gradient(to right, #396afc, #2948ff);
+  background: linear-gradient(to right, #479aef, #122bbd);
 }
+
 .card.horizontal {
   .card-image {
     max-width: 40%;
-  }
-}
-
-#header {
-  user-select: none;
-
-  .top-bar {
-    .container {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem 0;
-
-      .btn {
-        padding: 0 1em;
-      }
-    }
-  }
-
-  .store-logo {
-    max-width: 90%;
   }
 }
 
@@ -57,15 +39,16 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+  }
 
-    .action-bar {
-      flex: 1 0 auto;
-      display: flex;
-      justify-content: flex-end;
+  .action-bar {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-end;
 
-      .home-btn {
-        transform: scale(2);
-      }
+    .btn-floating {
+      transform: scale(1.3);
+      text-align: center;
     }
   }
 
@@ -131,7 +114,7 @@ h2 {
     }
   }
 
-  .btn-floating{
+  .btn-floating {
     @extend .blue-gradient;
   }
 
@@ -204,7 +187,7 @@ h2 {
       left: 0;
       top: 56px;
       width: 20rem;
-      max-width: 85vw;
+      max-width: 90vw;
       margin: 0 auto;
 
       input[type=text] {

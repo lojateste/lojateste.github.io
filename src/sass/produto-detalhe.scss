@@ -49,12 +49,14 @@
   }
 
   .btn-cart {
+    @extend .blue-gradient;
     position: absolute;
     top: 13rem;
     right: 0;
   }
 
   .btn-fav {
+    @extend .blue-gradient;
     position: absolute;
     top: 8rem;
     right: 0;

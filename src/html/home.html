@@ -8,28 +8,16 @@
 </head>
 
 <body>
-  <header id="header">
-    <div class="top-bar">
-      <div class="container">
-        <span class="spacer"></span>
-        <span>
-          <a href="login.html" class="btn white grey-text text-darken-3">Registre-se</a>
-          <a href="login.html" class="btn white grey-text text-darken-3">Login</a>
-        </span>
-      </div>
-
-      <div class="container">
-        <a href="home.html" class="store-logo">
-          <img src="img/store/average-logo.png" alt="Sua Loja">
-        </a>
-      </div>
-    </div>
-  </header>
-
-
-  <nav class="nav-wrapper blue darken-2 blue-gradient">
+  
+  <nav class="nav-wrapper blue-gradient">
     <div class="container">
       <ul class="action-bar">
+        <li>
+          <a class="open-side-nav btn-floating waves-effect waves-light" data-activates="side-nav">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </li>
+
         <li class="home-btn">
           <a href="home.html" class="btn-floating waves-effect waves-light">
             <i class="fa fa-home" aria-hidden="true"></i>
@@ -39,25 +27,23 @@
 
         <li class="search-bar">
           <form action="">
-            <input type="text" placeholder="Pesquisar..." class="browser-default z-depth-2" name="search">
+            <input type="text" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
             <button type="submit" class="search-btn">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
         </li>
+
         <li>
           <a href="carrinho.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
           </a>
         </li>
+
         <li>
           <a href="login.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a class="open-side-nav btn-floating waves-effect waves-light" data-activates="side-nav">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <!-- <i class="fa fa-sign-in" aria-hidden="true"></i> -->
+            Login
           </a>
         </li>
       </ul>
@@ -65,7 +51,7 @@
   </nav>
 
   <aside>
-    <ul id="side-nav" class="side-nav blue darken-3 blue-gradient">
+    <ul id="side-nav" class="side-nav blue-gradient">
       <li class="title">Categorias</li>
       <li><a href="#!">Computadores</a></li>
       <li class="no-padding">
@@ -386,7 +372,7 @@
   </main>
 
 
-  <footer class="page-footer center-align blue darken-2 blue-gradient">
+  <footer class="page-footer center-align blue-gradient">
     <div class="container">
       <a class="btn-floating btn-large waves-effect white">
         <i class="fa fa-facebook blue-text text-darken-2"></i>
