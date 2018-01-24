@@ -10,10 +10,16 @@
   flex: 1 1 auto !important;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: #aaa;
+}
+
 .blue-gradient {
   background-color: #1976D2;
   // background: linear-gradient(to right, #396afc, #2948ff);
-  background: linear-gradient(to right, #479aef, #122bbd);
+  background: linear-gradient(to right, #479aef, #286dca);
 }
 
 .card.horizontal {
@@ -60,9 +66,9 @@
       color: #444;
       border: none;
       border-radius: 200px;
-      padding: 0.8em 4em 0.8em 1.5em;
+      padding: 0.8em 3em 0.8em 1.5em;
       outline: none;
-      width: 15rem;
+      width: 16rem;
       transition: all 0.2s ease;
     }
 
@@ -91,7 +97,8 @@
   }
 }
 
-h2 {
+#main > .container > h2,
+#main > h2 {
   font-size: 1.5rem;
   color: #444;
   padding: 0.5em 1em;

@@ -94,10 +94,16 @@
                 <img src="img/products/3-CAPANOTEBOOK.jpg" alt="">
               </div>
             </div>
+
+            <button class="btn-fav btn-floating btn-large waves-effect waves-light blue darken-2">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
           </div>
 
           <div class="product-description col s12 m8 offset-m2 l4">
+
             <h1>Capa para Notebook</h1>
+            <h2>(Cód. 314159265)</h2>
 
             <div class="product-rating">
               <i class="fa fa-star" aria-hidden="true"></i>
@@ -106,29 +112,30 @@
               <i class="fa fa-star" aria-hidden="true"></i>
               <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
+            <hr>
 
-            <div class="product-price">R$ 49,99</div>
-            <div class="product-old-price">R$ 64,99</div>
+            <div class="product-payment">
+              Vendido e entregue por <b>Sua Loja</b><br><br>
+              <span class="product-old-price">R$ 64,99</span>
+              <span class="product-discount">(23% de Desconto)</span><br>
+              <span class="product-price">R$ 49,99</span><br> em 1x no cartão <br>
+
+              <button class="btn-cart btn waves-effect waves-light">Comprar</button>
+            </div>
+            <hr>
 
             <ul class="product-highlights">
-              <li>
-                <i class="fa fa-truck" aria-hidden="true"></i>
-                Frete grátis para todo o país
-              </li>
-
-              <li>
-                <i class="fa fa-credit-card" aria-hidden="true"></i>
-                12x R$ 4,17 sem juros
-              </li>
-              </li>
-
-              <li>
-                <i class="fa fa-undo" aria-hidden="true"></i>
-                Devolução grátis por 7 dias
+              <li class="row">
+                <i class="fa fa-credit-card col s2" aria-hidden="true"></i>
+                <span class="col s10">
+                  <b>R$ 59,99</b> no cartão de crédito em até 10x de R$ 5,99 s/ juros
+                  <br>
+                  <a href="">ver parcelas</a>
+                </span>
               </li>
             </ul>
 
-             <div class="input-field">
+            <!-- <div class="input-field">
               <select>
                 <option value="" disabled selected>Escolha um Modelo</option>
                 <option value="1">Bolinhas</option>
@@ -136,21 +143,19 @@
                 <option value="3">Fita VHS</option>
               </select>
               <label>Modelo</label>
-            </div>
+            </div> -->
 
-            <label>
+            <!-- <label>
               <span>Quantidade:</span>
               <input type="number" name="item-qnt">
-            </label>
+            </label> -->
 
+            <div class="product-freight">
+              <label for="user-cep">Calcular frete e prazo</label>
+              <input id="user-cep" type="text">
+              <button class="submit-freight btn waves-effect blue-gradient waves-light">OK</button>
+            </div>
 
-            <button class="btn-fav btn-floating btn-large waves-effect waves-light blue darken-2">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </button>
-
-            <button class="btn-cart btn-floating btn-large waves-effect waves-light blue darken-2">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </button>
           </div>
         </div>
       </div>
@@ -261,13 +266,14 @@
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 <!-- Materialize -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 
 <!-- OwlCarousel -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 
 <!-- JavaScript -->
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/produto-detalhe.js"></script>
+<script src="js/main.js"></script>
+<script src="js/produto-detalhe.js"></script>
 
 </html>
