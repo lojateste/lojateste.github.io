@@ -22,8 +22,12 @@ $(document).ready(function() {
 
   // Gatihlos do Owl carousel
   $('.materialboxed').materialbox()
+  
+  $('.modal').modal()
 
   $('select').material_select()
+
+  $('.collapsible').collapsible()
 
 
   $('.product-details .owl-carousel').owlCarousel({

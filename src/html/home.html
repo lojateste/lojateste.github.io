@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  
+
   <nav class="nav-wrapper blue-gradient">
     <div class="container">
       <ul class="action-bar">
@@ -18,26 +18,29 @@
           </a>
         </li>
 
+        <li class="spacer"></li>
         <li class="home-btn">
-          <a href="home.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-home" aria-hidden="true"></i>
+          <a href="home.html" class="btn waves-effect waves-light">
+            Sua Loja
           </a>
         </li>
         <li class="spacer"></li>
 
         <li class="search-bar">
           <form action="">
-            <input type="text" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
+            <input type="text" autocomplete="off" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
             <button type="submit" class="search-btn">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
-        </li>
-
-        <li>
-          <a href="carrinho.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
+          <ul class="search-list">
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+          </ul>
         </li>
 
         <li>
@@ -52,7 +55,9 @@
 
   <aside>
     <ul id="side-nav" class="side-nav blue-gradient">
-      <li class="title">Categorias</li>
+      <li class="title"><a href="home.html">Home</a></li>
+      <li class="title"><a href="favoritos.html">Favoritos</a></li>
+      <li class="title"><a>Categorias</a></li>
       <li><a href="#!">Computadores</a></li>
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
@@ -79,6 +84,15 @@
 
   <main id="main">
     <div class="container">
+      <!-- Banner -->
+      <div class="owl-carousel banner-carousel owl-theme">
+        <a href="#"><img src="img/banners/banner-01.jpg" alt=""></a>
+        <a href="#"><img src="img/banners/banner-02.jpg" alt=""></a>
+        <a href="#"><img src="img/banners/banner-03.jpg" alt=""></a>
+        <a href="#"><img src="img/banners/banner-04.jpg" alt=""></a>
+      </div>
+      <!-- Banner -->
+
 
       <!-- Ofertas Imperdíveis -->
       <h2>Ofertas Imperdíveis!</h2>
@@ -372,22 +386,36 @@
   </main>
 
 
-  <footer class="page-footer center-align blue-gradient">
+  <footer class="page-footer blue-gradient">
     <div class="container">
-      <a class="btn-floating btn-large waves-effect white">
-        <i class="fa fa-facebook blue-text text-darken-2"></i>
-      </a>
-      <a class="btn-floating btn-large waves-effect white">
-        <i class="fa fa-instagram blue-text text-darken-2"></i>
-      </a>
-      <a class="btn-floating btn-large waves-effect white">
-        <i class="fa fa-phone blue-text text-darken-2"></i>
-      </a>
+      <strong>Precisa de ajuda?</strong><br><br>
+      <span>Atendimento por e-mail, telefone e dúvidas frequentes.</span>
+      <a href="">Clique aqui.</a><br>
+      <hr>
+
+      <strong>Conecte-se conosco</strong><br>
+      <div class="center-align">
+        <a class="btn-floating btn-large waves-effect white">
+          <i class="fa fa-facebook blue-text text-darken-2"></i>
+        </a>
+        <a class="btn-floating btn-large waves-effect white">
+          <i class="fa fa-instagram blue-text text-darken-2"></i>
+        </a>
+        <a class="btn-floating btn-large waves-effect white">
+          <i class="fa fa-phone blue-text text-darken-2"></i>
+        </a>
+      </div>
+      <hr>
+
+      <span>
+        Todas as regras e promoções são válidas apenas para produtos vendidos e entregues por Sua Loja.
+        O valor de oferta do produto seŕa garantido após a finalização da compra.
+        Havendo divergência, prevalecerá o menor preço ofertado.
+      </span><br><br>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        © 2018 <a href="https://jonatanlins.github.io" class="white-text">Jonatan Lins</a>.
-        Todos os Direitos Reservados
+        © 2018 Sua Loja. Todos os Direitos Reservados
       </div>
     </div>
   </footer>

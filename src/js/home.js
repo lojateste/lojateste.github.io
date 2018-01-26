@@ -17,11 +17,18 @@ $(document).ready(function() {
   }
 
   // Gatihlos do Owl carousel
+  $('.owl-carousel.banner-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    dots: false,
+    autoplayTimeout: 3500,
+    responsive: {0:{items: 1}}
+  })
+
   $('.owl-carousel.featured-items').owlCarousel({
     loop: true,
     margin: 10,
-    dots: true,
-    // nav: true,
     autoplay: true,
     autoplayTimeout: 4000,
     responsive: responsiveCarousel
@@ -32,7 +39,6 @@ $(document).ready(function() {
     margin: 10,
     autoplay: true,
     autoplayTimeout: 6000,
-    // nav: true,
     responsive: responsiveCarousel
   })
 

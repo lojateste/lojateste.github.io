@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".open-side-nav").sideNav({menuWidth:280})});
+$(document).ready(function(){$(".open-side-nav").sideNav({menuWidth:280}),$(".search-bar input").on("input",function(){$(".search-bar input").val().length?$(".search-bar .search-list").addClass("active"):$(".search-bar .search-list").removeClass("active")})});

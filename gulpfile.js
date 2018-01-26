@@ -50,7 +50,10 @@ gulp.task('sass', function() {
 // Compressor de Javascript
 gulp.task('js', function() {
   gulp.src(srcPath + 'js/**/*.js')
-    .pipe(uglify())
+    .pipe(uglify().on('error', function(uglify) {
+      console.error(uglify.message);
+      this.emit('end');
+    }))
     .pipe(gulp.dest(distPath + 'js'))
     .pipe(browserSync.reload({
       stream: true

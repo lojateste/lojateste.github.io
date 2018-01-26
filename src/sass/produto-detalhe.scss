@@ -52,7 +52,7 @@
     }
 
     .product-discount {
-      color: lime;
+      color: red;
     }
 
     .btn-cart {
@@ -63,18 +63,38 @@
 
   .product-highlights {
     li {
-      margin: 1rem 0;
-
-      .fa {
-        font-size: 2rem;
+      .collapsible-header {
+        .fa {
+          float: left;
+          font-size: 2rem;
+        }
       }
     }
+  }
+
+  .input-field{
+    margin: 3rem 0 2rem;
+    padding: 2rem 1rem 1px;
+    border-radius: 2px;
+    @extend .z-depth-2;
+
+    label{
+      left: 1rem;
+      top: 1rem;
+      transform: none;
+    }
+  }
+
+  .collapsible{
+    @extend .z-depth-2;
+    border-radius: 2px;
+    border: none;
   }
 
   .product-freight {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #9e9e9e;
+    @extend .z-depth-2;
     border-radius: 2px;
     padding: 1rem;
     margin: 2rem 0;

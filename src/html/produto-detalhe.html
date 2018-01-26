@@ -18,26 +18,29 @@
           </a>
         </li>
 
+        <li class="spacer"></li>
         <li class="home-btn">
-          <a href="home.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-home" aria-hidden="true"></i>
+          <a href="home.html" class="btn waves-effect waves-light">
+            Sua Loja
           </a>
         </li>
         <li class="spacer"></li>
 
         <li class="search-bar">
           <form action="">
-            <input type="text" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
+            <input type="text" autocomplete="off" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
             <button type="submit" class="search-btn">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
-        </li>
-
-        <li>
-          <a href="carrinho.html" class="btn-floating waves-effect waves-light">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
+          <ul class="search-list">
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+          </ul>
         </li>
 
         <li>
@@ -52,7 +55,9 @@
 
   <aside>
     <ul id="side-nav" class="side-nav blue-gradient">
-      <li class="title">Categorias</li>
+      <li class="title"><a href="home.html">Home</a></li>
+      <li class="title"><a href="favoritos.html">Favoritos</a></li>
+      <li class="title"><a>Categorias</a></li>
       <li><a href="#!">Computadores</a></li>
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
@@ -122,20 +127,8 @@
 
               <button class="btn-cart btn waves-effect waves-light">Comprar</button>
             </div>
-            <hr>
 
-            <ul class="product-highlights">
-              <li class="row">
-                <i class="fa fa-credit-card col s2" aria-hidden="true"></i>
-                <span class="col s10">
-                  <b>R$ 59,99</b> no cartão de crédito em até 10x de R$ 5,99 s/ juros
-                  <br>
-                  <a href="">ver parcelas</a>
-                </span>
-              </li>
-            </ul>
-
-            <!-- <div class="input-field">
+            <div class="input-field">
               <select>
                 <option value="" disabled selected>Escolha um Modelo</option>
                 <option value="1">Bolinhas</option>
@@ -143,18 +136,71 @@
                 <option value="3">Fita VHS</option>
               </select>
               <label>Modelo</label>
-            </div> -->
+            </div>
 
-            <!-- <label>
-              <span>Quantidade:</span>
-              <input type="number" name="item-qnt">
-            </label> -->
+            <ul class="collapsible product-highlights" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">
+                  <i class="fa fa-credit-card" aria-hidden="true"></i>
+                  <span>
+                    <b>R$ 59,99</b> no cartão de crédito em até 10x de R$ 5,99 s/ juros
+                    <br>
+                    <a>ver parcelas</a>
+                  </span>
+                </div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>1x de 59,99 s/ juros</li>
+                    <li>2x de 29,99 s/ juros</li>
+                    <li>3x de 19,99 s/ juros</li>
+                    <li>4x de 14,99 s/ juros</li>
+                    <li>5x de 11,99 s/ juros</li>
+                    <li>6x de 9,99 s/ juros</li>
+                    <li>7x de 9,57 s/ juros</li>
+                    <li>8x de 7,49 s/ juros</li>
+                    <li>9x de 6,66 s/ juros</li>
+                    <li>10x de 5,99 s/ juros</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
 
             <div class="product-freight">
               <label for="user-cep">Calcular frete e prazo</label>
               <input id="user-cep" type="text">
-              <button class="submit-freight btn waves-effect blue-gradient waves-light">OK</button>
+              <button class="submit-freight btn waves-effect blue-gradient waves-light modal-trigger" href="#freight-info">OK</button>
             </div>
+
+            <div id="freight-info" class="modal">
+              <div class="modal-content">
+                <strong>Envio para Pernambuco (Caruaru)</strong>
+                <p>
+                  <input name="freight" type="radio" id="freight-opt-1" />
+                  <label for="freight-opt-1">
+                    Expresso - <b>R$ 47,90</b><br>
+                    Chegará entre os dias 31/jan e 02/fev.
+                  </label>
+                </p>
+                <p>
+                  <input name="freight" type="radio" id="freight-opt-2" />
+                  <label for="freight-opt-2">
+                    Normal - <b>R$ 23,90</b><br>
+                    Chegará entre os dias 6 e 8 de fevereiro.
+                  </label>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
+              </div>
+            </div>
+
+<!-- Forma de envio	Custo	Entrega estimada
+ Expresso
+R$ 6790
+Chegará entre os dias 31/jan e 02/fev.
+ Normal
+R$ 3390
+Chegará entre os dias 6 e 8 de fevereiro. -->
 
           </div>
         </div>
@@ -238,21 +284,36 @@
   </main>
 
 
-  <footer class="page-footer center-align blue-gradient">
+  <footer class="page-footer blue-gradient">
     <div class="container">
-      <a class="btn-floating btn-large waves-effect white">
-        <i class="fa fa-facebook blue-text text-darken-2"></i>
-      </a>
-      <a class="btn-floating btn-large waves-effect white">
-        <i class="fa fa-instagram blue-text text-darken-2"></i>
-      </a>
-      <a class="btn-floating btn-large waves-effect white">
-        <i class="fa fa-phone blue-text text-darken-2"></i>
-      </a>
+      <strong>Precisa de ajuda?</strong><br><br>
+      <span>Atendimento por e-mail, telefone e dúvidas frequentes.</span>
+      <a href="">Clique aqui.</a><br>
+      <hr>
+
+      <strong>Conecte-se conosco</strong><br>
+      <div class="center-align">
+        <a class="btn-floating btn-large waves-effect white">
+          <i class="fa fa-facebook blue-text text-darken-2"></i>
+        </a>
+        <a class="btn-floating btn-large waves-effect white">
+          <i class="fa fa-instagram blue-text text-darken-2"></i>
+        </a>
+        <a class="btn-floating btn-large waves-effect white">
+          <i class="fa fa-phone blue-text text-darken-2"></i>
+        </a>
+      </div>
+      <hr>
+
+      <span>
+        Todas as regras e promoções são válidas apenas para produtos vendidos e entregues por Sua Loja.
+        O valor de oferta do produto seŕa garantido após a finalização da compra.
+        Havendo divergência, prevalecerá o menor preço ofertado.
+      </span><br><br>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        © 2018 <a href="https://jonatanlins.github.io" class="white-text">Jonatan Lins</a>. Todos os Direitos Reservados
+        © 2018 Sua Loja. Todos os Direitos Reservados
       </div>
     </div>
   </footer>
