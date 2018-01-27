@@ -27,6 +27,7 @@
         <li class="spacer"></li>
 
         <li class="search-bar">
+          <div class="overlay"></div>
           <form action="">
             <input type="text" autocomplete="off" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search">
             <button type="submit" class="search-btn">
@@ -84,14 +85,24 @@
 
   <main id="main">
     <div class="container">
-      <!-- Banner -->
+      <!-- Banners -->
+      <a href="#"><img src="img/banners/banner-superior.png" alt=""></a>
+
       <div class="owl-carousel banner-carousel owl-theme">
-        <a href="#"><img src="img/banners/banner-01.jpg" alt=""></a>
-        <a href="#"><img src="img/banners/banner-02.jpg" alt=""></a>
-        <a href="#"><img src="img/banners/banner-03.jpg" alt=""></a>
-        <a href="#"><img src="img/banners/banner-04.jpg" alt=""></a>
+        <picture>
+          <source srcset="img/banners/banner-01-small.png" media="(max-width: 479px)">
+          <img src="img/banners/banner-01.png" alt="">
+        </picture>
+        <picture>
+          <source srcset="img/banners/banner-02-small.png" media="(max-width: 479px)">
+          <img src="img/banners/banner-02.png" alt="">
+        </picture>
+        <picture>
+          <source srcset="img/banners/banner-03-small.png" media="(max-width: 479px)">
+          <img src="img/banners/banner-03.png" alt="">
+        </picture>
       </div>
-      <!-- Banner -->
+      <!-- Banners -->
 
 
       <!-- Ofertas Imperdíveis -->

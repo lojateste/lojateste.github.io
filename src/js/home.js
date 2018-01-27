@@ -21,8 +21,8 @@ $(document).ready(function() {
     loop: true,
     margin: 10,
     autoplay: true,
-    dots: false,
     autoplayTimeout: 3500,
+    dots: false,
     responsive: {0:{items: 1}}
   })
 
@@ -30,6 +30,7 @@ $(document).ready(function() {
     loop: true,
     margin: 10,
     autoplay: true,
+    autoplayHoverPause: true,
     autoplayTimeout: 4000,
     responsive: responsiveCarousel
   })
@@ -38,6 +39,7 @@ $(document).ready(function() {
     loop: true,
     margin: 10,
     autoplay: true,
+    autoplayHoverPause: true,
     autoplayTimeout: 6000,
     responsive: responsiveCarousel
   })

@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+@import 'main';
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    flex: 1 0 200px;
+    margin: 0 .75rem 2rem;
+  }
+}
+//
+// MEDIA QUERIES
+//
+@media #{$small-and-down} {}

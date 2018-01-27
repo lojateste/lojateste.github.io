@@ -8,10 +8,14 @@ $(document).ready(function() {
   // Barra de Pesquisas
   $('.search-bar input').on('input', function(){
     if($('.search-bar input').val().length){
-      $('.search-bar .search-list').addClass('active')
+      $('.search-bar .search-list, .search-bar .overlay').addClass('active')
     }else{
-      $('.search-bar .search-list').removeClass('active')
+      $('.search-bar .search-list, .search-bar .overlay').removeClass('active')
     }
   })
+  $('.search-bar .overlay').click(function(){
+    $('.search-bar .search-list, .search-bar .overlay').removeClass('active')
+  })
+
 
 });

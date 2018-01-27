@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   // Gatihlos do Owl carousel
   $('.materialboxed').materialbox()
-  
+
   $('.modal').modal()
 
   $('select').material_select()
@@ -45,12 +45,8 @@ $(document).ready(function() {
     loop: true,
     margin: 10,
     dots: true,
-    // nav: true,
-    // navText: [
-    //   '<i class="fa fa-arrow-left" aria-hidden="true"></i>',
-    //   '<i class="fa fa-arrow-right" aria-hidden="true"></i>'
-    // ],
     autoplay: true,
+    autoplayHoverPause: true,
     autoplayTimeout: 3000,
     responsive: responsiveCarousel
   })
