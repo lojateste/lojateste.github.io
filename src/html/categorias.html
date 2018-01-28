@@ -82,13 +82,80 @@
     </ul>
   </aside>
 
+  <aside>
+    <ul id="category-filter" class="collapsible side-nav" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header active">
+          <i class="fa placeholder" aria-hidden="true"></i> Ordenar Por
+        </div>
+        <div class="collapsible-body">
+          <p>
+            <input name="ordenar" type="radio" id="ordenar-01"/>
+            <label for="ordenar-01">Preço</label>
+          </p>
+          <p>
+            <input name="ordenar" type="radio" id="ordenar-02"/>
+            <label for="ordenar-02">Data de Lançamento</label>
+          </p>
+          <p>
+            <input name="ordenar" type="radio" id="ordenar-03"/>
+            <label for="ordenar-03">Mais Vendidos</label>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header active">
+          <i class="fa placeholder" aria-hidden="true"></i> Marca
+        </div>
+        <div class="collapsible-body">
+          <p>
+            <input type="checkbox" id="marca-01"/>
+            <label for="marca-01">Microsoft</label>
+          </p>
+          <p>
+            <input type="checkbox" id="marca-02"/>
+            <label for="marca-02">Sony</label>
+          </p>
+          <p>
+            <input type="checkbox" id="marca-03"/>
+            <label for="marca-03">Acer</label>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header active">
+          <i class="fa placeholder" aria-hidden="true"></i> Preço
+        </div>
+        <div class="collapsible-body">
+          <p>
+            <input type="checkbox" id="preco-01"/>
+            <label for="preco-01">Até R$ 272,00</label>
+          </p>
+          <p>
+            <input type="checkbox" id="preco-02"/>
+            <label for="preco-02">R$ 272,00 a R$ 544,00</label>
+          </p>
+          <p>
+            <input type="checkbox" id="preco-03"/>
+            <label for="preco-03">Acima de R$ 544,00</label>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </aside>
+
+
 
   <main id="main">
     <div class="container">
 
+      <button class="right blue-gradient btn waves-effect waves-light button-collapse" data-activates="category-filter">
+        Filtrar
+      </button>
+
       <h2>Categoria</h2>
 
-      <div class="product-list row">
+      <div class="product-list">
 
         <div class="product-card">
           <div class="card-image">
@@ -361,5 +428,15 @@
 
 <!-- JavaScript -->
 <script type="text/javascript" src="js/main.js"></script>
+
+<!-- Custom Script -->
+<script>
+  $('.button-collapse').sideNav({
+    menuWidth: 280,
+    edge: 'right',
+  })
+
+  $('.collapsible').collapsible()
+</script>
 
 </html>
