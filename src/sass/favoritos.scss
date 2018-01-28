@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+@import 'main';
+
+[data-activates=category-filter] {
+  margin: 4px;
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .product-card {
+    flex: 1 0 auto;
+    width: 150px;
+    margin: 0 0.5rem 2rem;
+
+    @media #{$medium-and-up} {
+      width: 200px;
+    }
+
+    .btn-fav{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #fffc00;
+      background: linear-gradient(to right, #fffc00, #ffc107);
+    }
+  }
+}
