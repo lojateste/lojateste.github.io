@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   // Barra de Pesquisas
   $('.search-bar input').on('input', function(){
-    if($('.search-bar input').val().length){
+    if($.trim($('.search-bar input').val()).length){
       $('.search-bar .search-list, .search-bar .overlay').addClass('active')
     }else{
       $('.search-bar .search-list, .search-bar .overlay').removeClass('active')

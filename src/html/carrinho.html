@@ -86,121 +86,177 @@
   <main id="main">
     <div class="container">
 
-      <div class="product-details">
-        <div class="row">
-          <div class="product-images col s12 m8 offset-m2 l8">
-            <div class="owl-carousel owl-theme">
-              <div>
-                <img src="img/products/1-CAPANOTEBOOK.jpg" alt="">
-              </div>
-              <div>
-                <img src="img/products/2-CAPANOTEBOOK.jpg" alt="">
-              </div>
-              <div>
-                <img src="img/products/3-CAPANOTEBOOK.jpg" alt="">
-              </div>
+      <h2>Meu Carrinho</h2>
+
+      <!-- Carrinho -->
+
+      <div class="product-cart">
+        <ul class="cart-product">
+          <li><img src="img/products/1-FONTE.jpg" alt="" class="product-img"></li>
+          <li>
+            <div class="delete-btn btn-floating waves-effect white">
+              <i class="fa fa-close grey-text" aria-hidden="true"></i>
             </div>
-
-            <button class="btn-fav btn-floating btn-large waves-effect waves-light blue darken-2">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </button>
-          </div>
-
-          <div class="product-description col s12 m8 offset-m2 l4">
-
-            <h1>Capa para Notebook</h1>
-            <h2>(Cód. 314159265)</h2>
-
-            <div class="product-rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star-o" aria-hidden="true"></i>
-            </div>
-            <hr>
-
-            <div class="product-payment">
-              Vendido e entregue por <b>Sua Loja</b><br><br>
-              <span class="product-old-price">R$ 64,99</span>
-              <span class="product-discount">(23% de Desconto)</span><br>
-              <span class="product-price">R$ 49,99</span><br> em 1x no cartão <br>
-
-              <a href="carrinho.html" class="btn-cart btn waves-effect waves-light">Comprar</a>
-            </div>
-
+          </li>
+          <li>
+            <h3 class="card-title truncate">Fonte de Alimentação</h3></li>
+          <li class="item-qnt">
             <div class="input-field">
               <select>
-                <option value="" disabled selected>Escolha um Modelo</option>
-                <option value="1">Bolinhas</option>
-                <option value="2">Romero Britto</option>
-                <option value="3">Fita VHS</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
               </select>
-              <label>Modelo</label>
+              <label>Quantidade:</label>
             </div>
+          </li>
+          <li class="product-info">
+            Entrega: <span class="delivery-date">21/03/2018</span>
+            <br> Preço Unitário: R$ <span class="price">49,99</span>
+            <br> Preço Total: R$ <span class="total-price">49,99</span>
+          </li>
+        </ul>
 
-            <ul class="collapsible product-highlights" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header">
-                  <i class="fa fa-credit-card" aria-hidden="true"></i>
-                  <span>
-                    <b>R$ 59,99</b> no cartão de crédito em até 10x de R$ 5,99 s/ juros
-                    <br>
-                    <a>ver parcelas</a>
-                  </span>
-                </div>
-                <div class="collapsible-body">
-                  <ul>
-                    <li>1x de 59,99 s/ juros</li>
-                    <li>2x de 29,99 s/ juros</li>
-                    <li>3x de 19,99 s/ juros</li>
-                    <li>4x de 14,99 s/ juros</li>
-                    <li>5x de 11,99 s/ juros</li>
-                    <li>6x de 9,99 s/ juros</li>
-                    <li>7x de 9,57 s/ juros</li>
-                    <li>8x de 7,49 s/ juros</li>
-                    <li>9x de 6,66 s/ juros</li>
-                    <li>10x de 5,99 s/ juros</li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-
-            <div class="product-freight">
-              <label for="user-cep">Calcular frete e prazo</label>
-              <input id="user-cep" type="text">
-              <button class="submit-freight btn waves-effect blue-gradient waves-light modal-trigger" href="#freight-info">OK</button>
+        <ul class="cart-product">
+          <li><img src="img/products/1-CAPANOTEBOOK.jpg" alt="" class="product-img"></li>
+          <li>
+            <div class="delete-btn btn-floating waves-effect white">
+              <i class="fa fa-close grey-text" aria-hidden="true"></i>
             </div>
-
-            <div id="freight-info" class="modal">
-              <div class="modal-content">
-                <strong>Envio para Pernambuco (Caruaru)</strong>
-                <p>
-                  <input name="freight" type="radio" id="freight-opt-1" />
-                  <label for="freight-opt-1">
-                    Expresso - <b>R$ 47,90</b><br>
-                    Chegará entre os dias 31/jan e 02/fev.
-                  </label>
-                </p>
-                <p>
-                  <input name="freight" type="radio" id="freight-opt-2" />
-                  <label for="freight-opt-2">
-                    Normal - <b>R$ 23,90</b><br>
-                    Chegará entre os dias 6 e 8 de fevereiro.
-                  </label>
-                </p>
-              </div>
-              <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
-              </div>
+          </li>
+          <li>
+            <h3 class="card-title truncate">Capa para Notebook</h3></li>
+          <li class="item-qnt">
+            <div class="input-field">
+              <select>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <label>Quantidade:</label>
             </div>
-            
+          </li>
+          <li class="product-info">
+            Entrega: <span class="delivery-date">21/03/2018</span>
+            <br> Preço Unitário: R$ <span class="price">49,99</span>
+            <br> Preço Total: R$ <span class="total-price">49,99</span>
+          </li>
+        </ul>
+
+        <ul class="cart-product">
+          <li><img src="img/products/2-FONTES.jpg" alt="" class="product-img"></li>
+          <li>
+            <div class="delete-btn btn-floating waves-effect white">
+              <i class="fa fa-close grey-text" aria-hidden="true"></i>
+            </div>
+          </li>
+          <li>
+            <h3 class="card-title truncate">Carregador</h3></li>
+          <li class="item-qnt">
+            <div class="input-field">
+              <select>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <label>Quantidade:</label>
+            </div>
+          </li>
+          <li class="product-info">
+            Entrega: <span class="delivery-date">21/03/2018</span>
+            <br> Preço Unitário: R$ <span class="price">49,99</span>
+            <br> Preço Total: R$ <span class="total-price">49,99</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m5">
+          <div class="product-freight">
+            <label for="user-cep">
+              <b>Simule o prazo de entrega e o frete para seu CEP abaixo:</b>
+            </label>
+            <br>
+            <input id="user-cep" type="text">
+            <button class="submit-freight btn waves-effect blue-gradient waves-light modal-trigger" href="#freight-info">OK</button>
+            <br>
+            <a target="_blank" href="http://www.buscacep.correios.com.br/sistemas/buscacep/">Não sei meu CEP</a>
+          </div>
+        </div>
+
+        <div class="col s12 m7">
+          <div class="product-final-info">
+            <table>
+              <tr>
+                <td>Fonte de Alimentação</td>
+                <td>R$ 49,99</td>
+              </tr>
+              <tr>
+                <td>Capa para Notebook</td>
+                <td>R$ 49,99</td>
+              </tr>
+              <tr>
+                <td>Carregador</td>
+                <td>R$ 49,99</td>
+              </tr>
+              <tr class="freight">
+                <td>Frete</td>
+                <td>R$ 23,90</td>
+              </tr>
+              <tr class="total">
+                <td>Total</td>
+                <td>R$ 173,87</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
 
+      <div class="cart-action-bar">
+        <a href="home.html" class="btn waves-effect waves-light blue-gradient">Escolher Mais Produtos</a>
+        <a href="compra-finalizada.html" class="btn waves-effect waves-light blue-gradient">Comprar</a>
+      </div>
+
+      <!-- Modal -->
+      <div id="freight-info" class="modal">
+        <div class="modal-content">
+          <strong>Envio para Pernambuco (Caruaru)</strong>
+          <p>
+            <input name="freight" type="radio" id="freight-opt-1" />
+            <label for="freight-opt-1">
+              Expresso - <b>R$ 47,90</b><br>
+              Chegará entre os dias 31/jan e 02/fev.
+            </label>
+          </p>
+          <p>
+            <input name="freight" type="radio" id="freight-opt-2" />
+            <label for="freight-opt-2">
+              Normal - <b>R$ 23,90</b><br>
+              Chegará entre os dias 6 e 8 de fevereiro.
+            </label>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
+        </div>
+      </div>
+      <!-- Modal -->
+
+      <!-- Carrinho -->
+
+
+
       <!-- Ofertas Imperdíveis -->
-      <h2>Ofertas Imperdíveis!</h2>
+      <h2>Aproveite e leve também!</h2>
 
       <div class="owl-carousel featured-items owl-theme">
         <div class="product-card hoverable card">
@@ -208,7 +264,7 @@
             <img src="img/products/7-PROTECAOELETRICA.jpg" alt="" class="product-img">
             <span class="card-title">Proteção Elétrica</span>
             <a href="carrinho.html" class="btn-floating btn-large halfway-fab waves-effect waves-light blue darken-2">
-  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
           </div>
           <div class="card-content">
@@ -225,7 +281,7 @@
             <img src="img/products/1-CAPANOTEBOOK.jpg" alt="" class="product-img">
             <span class="card-title">Capas para Notebook</span>
             <a href="carrinho.html" class="btn-floating btn-large halfway-fab waves-effect waves-light blue darken-2">
-  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
           </div>
           <div class="card-content">
@@ -314,7 +370,7 @@
 
 
 <!-- CSS -->
-<link type="text/css" rel="stylesheet" href="css/produto-detalhe.css">
+<link type="text/css" rel="stylesheet" href="css/carrinho.css">
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
