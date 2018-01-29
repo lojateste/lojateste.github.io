@@ -59,7 +59,7 @@
       <li class="title"><a href="home.html">Home</a></li>
       <li class="title"><a href="favoritos.html">Favoritos</a></li>
       <li class="title"><a>Categorias</a></li>
-      <li><a href="#!">Computadores</a></li>
+      <li><a href="categorias.html">Computadores</a></li>
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
           <li>
@@ -68,17 +68,17 @@
             </a>
             <div class="collapsible-body">
               <ul>
-                <li><a href="#!">Motorola</a></li>
-                <li><a href="#!">Apple</a></li>
-                <li><a href="#!">Samsung<span class="new badge">4</span></a></li>
-                <li><a href="#!">Xiaomi</a></li>
+                <li><a href="categorias.html">Motorola</a></li>
+                <li><a href="categorias.html">Apple</a></li>
+                <li><a href="categorias.html">Samsung<span class="new badge">4</span></a></li>
+                <li><a href="categorias.html">Xiaomi</a></li>
               </ul>
             </div>
           </li>
         </ul>
       </li>
-      <li><a href="#!">Notebooks<span class="new badge">2</span></a></li>
-      <li><a href="#!">Acessórios</a></li>
+      <li><a href="categorias.html">Notebooks<span class="new badge">2</span></a></li>
+      <li><a href="categorias.html">Acessórios</a></li>
     </ul>
   </aside>
 
@@ -195,7 +195,7 @@
               </div>
             </div>
 
-<!-- Forma de envio	Custo	Entrega estimada
+            <!-- Forma de envio	Custo	Entrega estimada
  Expresso
 R$ 6790
 Chegará entre os dias 31/jan e 02/fev.
@@ -336,6 +336,59 @@ Chegará entre os dias 6 e 8 de fevereiro. -->
 
 <!-- JavaScript -->
 <script src="js/main.js"></script>
-<script src="js/produto-detalhe.js"></script>
+
+<!-- Custom Script -->
+<script>
+  // Gatilho do JQuery mask
+  $('#user-cep').mask('00000-000')
+
+
+  responsiveCarousel = {
+    0: {
+      items: 1
+    },
+    450: {
+      items: 2
+    },
+    601: {
+      items: 3
+    },
+    1200: {
+      items: 4
+    }
+
+  }
+
+  // Gatihlos do Owl carousel
+  $('.materialboxed').materialbox()
+
+  $('.modal').modal()
+
+  $('select').material_select()
+
+  $('.collapsible').collapsible()
+
+
+  $('.product-details .owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  })
+
+  $('.owl-carousel.featured-items').owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 3000,
+    responsive: responsiveCarousel
+  })
+</script>
 
 </html>
