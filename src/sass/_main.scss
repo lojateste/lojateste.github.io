@@ -175,13 +175,10 @@ label {
 #main > .container > h2,
 #main > h2 {
   font-size: 1.5rem;
-  color: #444;
-  // color: #1976D2;
+  color: #1976D2;
   padding: 0.5em 1em;
   margin-top: 4rem;
-  @extend .grey;
-  @extend .lighten-2;
-  // @extend .yellow;
+  @extend .yellow;
   box-shadow: inset 0 -2px rgba(255, 255, 255, 0.3);
 }
 
