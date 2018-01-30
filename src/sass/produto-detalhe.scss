@@ -3,6 +3,10 @@
 @import 'owl.carousel.scss';
 @import 'main';
 
+.back-layer{
+  z-index: -1000 !important; 
+}
+
 .product-details {
   position: relative;
   margin-top: 3rem;

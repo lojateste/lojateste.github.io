@@ -89,15 +89,15 @@
       <div class="product-details">
         <div class="row">
           <div class="product-images col s12 m8 offset-m2 l8">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme product-images-carousel">
               <div>
-                <img src="img/products/1-CAPANOTEBOOK.jpg" alt="">
+                <img src="img/products/1-CAPANOTEBOOK.jpg" alt="" class="materialboxed">
               </div>
               <div>
-                <img src="img/products/2-CAPANOTEBOOK.jpg" alt="">
+                <img src="img/products/2-CAPANOTEBOOK.jpg" alt="" class="materialboxed">
               </div>
               <div>
-                <img src="img/products/3-CAPANOTEBOOK.jpg" alt="">
+                <img src="img/products/3-CAPANOTEBOOK.jpg" alt="" class="materialboxed">
               </div>
             </div>
 
@@ -192,6 +192,7 @@
               </div>
               <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
+          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Fechar</a>
               </div>
             </div>
 
@@ -351,8 +352,19 @@
 
   }
 
-  // Gatihlos do Owl carousel
+  // Gatilhos do Materialize
   $('.materialboxed').materialbox()
+  $('.materialboxed').click(function() {
+    $('.materialboxed:not(.active)').closest('.owl-item').addClass('back-layer')
+    $('.nav-wrapper, .btn, .btn-floating').addClass('back-layer')
+    $('.owl-carousel:not(.product-images-carousel)').addClass('back-layer')
+    $('#materialbox-overlay').click(removeBackLayerClass)
+  })
+  $(window).scroll(removeBackLayerClass)
+
+  function removeBackLayerClass() {
+    $('.back-layer').removeClass('back-layer')
+  }
 
   $('.modal').modal()
 
@@ -361,7 +373,8 @@
   $('.collapsible').collapsible()
 
 
-  $('.product-details .owl-carousel').owlCarousel({
+  // Gatilhos do Owl carousel
+  $('.owl-carousel.product-images-carousel').owlCarousel({
     loop: true,
     margin: 10,
     dots: true,
