@@ -29,6 +29,26 @@
   }
 }
 
+#materialbox-overlay:before {
+  @extend .red;
+  content: '\f00d';
+  cursor: pointer;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border-radius: 2px;
+  color: white;
+  line-height: 3rem;
+  width: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
 .banner {
   width: 100%;
 }
@@ -224,7 +244,7 @@ label {
       color: #f1c40f;
       font-size: 1.5rem;
 
-      &.empty{
+      &.empty {
         color: #aaa;
       }
     }

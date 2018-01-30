@@ -19,17 +19,20 @@
   }
 
   // Gatilhos do Materialize
+  let removeBackLayerInterval
   $('.materialboxed').materialbox()
   $('.materialboxed').click(function() {
     $('.materialboxed:not(.active)').closest('.owl-item').addClass('back-layer')
     $('.nav-wrapper, .btn, .btn-floating').addClass('back-layer')
     $('.owl-carousel:not(.product-images-carousel)').addClass('back-layer')
-    $('#materialbox-overlay').click(removeBackLayerClass)
+    removeBackLayerInterval = setInterval(removeBackLayerClass, 100)
   })
-  $(window).scroll(removeBackLayerClass)
 
   function removeBackLayerClass() {
-    $('.back-layer').removeClass('back-layer')
+    if (!$('#materialbox-overlay').length) {
+      $('.back-layer').removeClass('back-layer')
+      clearInterval(removeBackLayerInterval)
+    }
   }
 
   $('.modal').modal()
