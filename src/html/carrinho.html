@@ -102,14 +102,7 @@
             <h3 class="card-title truncate">Fonte de Alimentação</h3></li>
           <li class="item-qnt">
             <div class="input-field">
-              <select>
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
+              <input type="number" value="1" min="1" max="99">
               <label>Quantidade:</label>
             </div>
           </li>
@@ -131,14 +124,7 @@
             <h3 class="card-title truncate">Capa para Notebook</h3></li>
           <li class="item-qnt">
             <div class="input-field">
-              <select>
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
+              <input type="number" value="1" min="1" max="99">
               <label>Quantidade:</label>
             </div>
           </li>
@@ -160,14 +146,7 @@
             <h3 class="card-title truncate">Carregador</h3></li>
           <li class="item-qnt">
             <div class="input-field">
-              <select>
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
+              <input type="number" value="1" min="1" max="99">
               <label>Quantidade:</label>
             </div>
           </li>
@@ -223,7 +202,7 @@
 
       <div class="cart-action-bar">
         <a href="home.html" class="btn waves-effect waves-light blue-gradient">Escolher Mais Produtos</a>
-        <a href="compra-finalizada.html" class="btn waves-effect waves-light blue-gradient">Comprar</a>
+        <a href="#register" class="btn waves-effect waves-light blue-gradient modal-trigger">Comprar</a>
       </div>
 
       <!-- Modal -->
@@ -251,6 +230,109 @@
         </div>
       </div>
       <!-- Modal -->
+
+
+
+
+      <!-- Modal -->
+      <div id="register" class="modal">
+        <form action="" method="post">
+          <div class="modal-content row">
+            <h4>Faça seu cadastro para finalizar a compra!</h4>
+
+            <div class="input-field col s12">
+              <input id="reg-email" name="email" type="email" class="validate" required>
+              <label for="reg-email">E-mail</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-name" name="name" type="text" class="validate" required>
+              <label for="reg-name">Nome Completo</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-cpf" name="cpf" type="text" class="validate" required>
+              <label for="reg-cpf">CPF</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-password" name="password" type="password" class="validate" required>
+              <label for="reg-password">Senha</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-password-confirm" name="password-confirm" type="password" class="validate" required>
+              <label for="reg-password-confirm">Confirme a senha</label>
+            </div>
+
+
+            <h2>Dados pessoais</h2>
+
+            <div class="input-field col s12">
+              <input id="reg-birth-date" name="birth-date" type="text" class="validate" required>
+              <label for="reg-birth-date">Data de nascimento</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-cep" name="cep" type="text" class="validate" required>
+              <label for="reg-cep">CEP</label>
+            </div>
+
+            <div class="input-field col s8">
+              <input id="reg-address" name="address" type="text" class="validate" required>
+              <label for="reg-address">Endereço</label>
+            </div>
+
+            <div class="input-field col s4">
+              <input id="reg-address-number" name="address-number" type="text" class="validate" required>
+              <label for="reg-address-number">Número</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-address-reference" name="address-reference" type="text" class="validate" required>
+              <label for="reg-address-reference">Referência</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-phone" name="phone" type="text" class="validate" required>
+              <label for="reg-phone">Telefone ou Celular</label>
+            </div>
+
+
+            <h2>Pagamento</h2>
+
+            <div class="input-field col s12">
+              <input id="reg-credit-card" name="credit-card" type="text" class="validate" required>
+              <label for="reg-credit-card">Cartão de crédito</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-credit-card-owner" name="credit-card-owner" type="text" class="validate" required>
+              <label for="reg-credit-card-owner">Titular do cartão</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-credit-card-expiration" name="credit-card-expiration" type="text" class="validate" required>
+              <label for="reg-credit-card-expiration">Data de vencimento</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="reg-credit-card-code" name="credit-card-code" type="text" class="validate" required>
+              <label for="reg-credit-card-code">Código de segurança</label>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
+            <button type="submit" class="modal-action waves-effect waves-green btn-flat">Continuar</button>
+          </div>
+        </form>
+      </div>
+      <!-- Modal -->
+
+
+
+
 
       <!-- Carrinho -->
 
@@ -388,8 +470,23 @@
 
 <!-- Custom Script -->
 <script>
-  // Gatilho do JQuery mask
-  $('#user-cep').mask('00000-000')
+  // Gatilhos do JQuery mask
+  let phoneMaskBehavior = function(val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  }
+  let phoneOptions = {
+    onKeyPress: function(val, e, field, options) {
+      field.mask(phoneMaskBehavior.apply({}, arguments), options);
+    }
+  }
+
+  $('#user-cep, #reg-cep').mask('00000-000')
+  $('#reg-cpf').mask('000.000.000-00')
+  $('#reg-birth-date').mask('00/00/0099')
+  $('#reg-phone').mask(phoneMaskBehavior, phoneOptions);
+  $('#reg-credit-card').mask('9900-0000-0000-0000');
+  $('#reg-credit-card-expiration').mask('00/0099');
+  $('#reg-credit-card-code').mask('9000');
 
 
   responsiveCarousel = {
@@ -437,6 +534,39 @@
     autoplayHoverPause: true,
     autoplayTimeout: 3000,
     responsive: responsiveCarousel
+  })
+
+
+  // Funções do carrinho de compras
+  function formatBRL(value) {
+    return Math.floor(value / 100) + ((value % 100 > 9) ? ',' + value % 100 : ',0' + value % 100)
+  }
+
+  function refreshTotalValue() {
+    let totalValueArray = $('.cart-product .product-info .total-price')
+    let totalValue = 0
+    totalValueArray.each(function(index, item) {
+      totalValue += parseInt(($(item).text()).replace(',', ''))
+    })
+    totalValue += parseInt($('.product-final-info .freight td:last-child').text().replace(',', '').replace('R$', ''))
+    $('.product-final-info .total td:last-child').html('R$ ' + formatBRL(totalValue))
+  }
+
+  $('.item-qnt input[type=number]').on('input', function() {
+    let cartProduct = $(this).closest('.cart-product')
+    let value = cartProduct.find('.price').text()
+    value = formatBRL(value.replace(',', '') * $(this).val())
+    cartProduct.find('.total-price').html(value)
+    $('.product-final-info tbody tr:nth-child(' + (cartProduct.index() + 1) + ') td:last-child')
+      .html('R$ ' + value)
+    refreshTotalValue()
+  })
+
+  $('.cart-product .delete-btn').click(function() {
+    let cartProduct = $(this).closest('.cart-product')
+    $('.product-final-info tbody tr:nth-child(' + (cartProduct.index() + 1) + ')').remove()
+    cartProduct.remove()
+    refreshTotalValue()
   })
 </script>
 
