@@ -4,59 +4,33 @@
 @import 'main';
 
 .product-cart {
+  margin-bottom: 0;
+
   .cart-product {
     position: relative;
     @extend .card;
     padding: 1rem;
     margin-bottom: 3rem;
 
-    .product-img {
-      max-height: 10rem;
-      margin: 0 auto;
-      display: block;
-    }
-
     .delete-btn {
       position: absolute;
-      top: 5px;
+      top: -15px;
       right: 5px;
     }
 
     .card-title {
       margin: 1rem 0;
-      text-align: center;
-    }
-
-    .item-qnt {
-      width: 6rem;
-      display: inline-block;
-
-      label {
-        font-size: 0.9rem;
-      }
+      font-size: 1.4rem;
     }
 
     .product-info {
-      margin-left: 2rem;
+      @extend .blue-text;
+      text-align: right;
       line-height: 1.8rem;
-      display: inline-block;
-      transform: translateY(1.2rem);
-    }
-    @media (min-width: 450px) {
-      width: 45%;
-      width: calc(50% - 1rem);
-      margin: 0 0.5rem 2rem;
-      display: inline-block;
 
-      .product-info {
+      p{
         margin: 0;
-        transform: none;
-        display: block;
       }
-    }
-    @media #{$medium-and-up} {
-      width: 30%;
-      width: calc(100% / 3 - 1rem);
     }
   }
 }
@@ -93,29 +67,30 @@
   }
 }
 
-#reg-credit-card-owner{
+#reg-credit-card-owner {
   text-transform: uppercase;
 }
 
-.product-final-info{
+.product-final-info {
   border: 1px solid #aaa;
   border-radius: 2px;
   padding: 1rem;
   margin-top: 2rem;
 
-  tr{
-    td{
+  tr {
+    td {
       padding: 5px;
 
-      &:last-child{
+      &:last-child {
         min-width: 7rem;
       }
     }
 
-    &.freight{
+    &.freight {
       font-weight: bold;
     }
-    &.total{
+
+    &.total {
       @extend .blue-text;
       font-size: 1.2rem;
       font-weight: bold;
