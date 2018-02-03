@@ -116,9 +116,8 @@
                 <h3 class="card-title">Fonte de Alimentação</h3>
                 <p class="green-text hide">Entrega em até 19 dias úteis</p>
                 <div class="product-info">
-                  <p class="hide">Preço Unitário: R$ <span class="price">49,99</span></p>
-                  <p>R$ <span class="total-price">49,99</span> ou</p>
-                  <p>R$ 46,99 à vista</p>
+                  <p>R$ <span data-value="49,99" class="price">49,99</span> ou</p>
+                  <p>R$ <span data-value="46,99" class="cash-price">46,99</span> à vista</p>
                 </div>
               </div>
             </div>
@@ -149,9 +148,8 @@
                 <h3 class="card-title">Capa para Notebook</h3>
                 <p class="green-text hide">Entrega em até 19 dias úteis</p>
                 <div class="product-info">
-                  <p class="hide">Preço Unitário: R$ <span class="price">49,99</span></p>
-                  <p>R$ <span class="total-price">49,99</span> ou</p>
-                  <p>R$ 46,99 à vista</p>
+                  <p>R$ <span data-value="49,99" class="price">49,99</span> ou</p>
+                  <p>R$ <span data-value="46,99" class="cash-price">46,99</span> à vista</p>
                 </div>
               </div>
             </div>
@@ -182,9 +180,8 @@
                 <h3 class="card-title">Carregador</h3>
                 <p class="green-text hide">Entrega em até 19 dias úteis</p>
                 <div class="product-info">
-                  <p class="hide">Preço Unitário: R$ <span class="price">49,99</span></p>
-                  <p>R$ <span class="total-price">49,99</span> ou</p>
-                  <p>R$ 46,99 à vista</p>
+                  <p>R$ <span data-value="49,99" class="price">49,99</span> ou</p>
+                  <p>R$ <span data-value="46,99" class="cash-price">46,99</span> à vista</p>
                 </div>
               </div>
             </div>
@@ -196,41 +193,33 @@
       <div class="row">
         <div class="col s12 m5">
           <div class="product-freight">
-            <label for="user-cep">
-              <b>Simule o prazo de entrega e o frete para seu CEP abaixo:</b>
-            </label>
-            <br>
-            <input id="user-cep" type="text">
-            <button class="submit-freight btn waves-effect blue-gradient waves-light modal-trigger" href="#freight-info">OK</button>
-            <br>
-            <a target="_blank" href="http://www.buscacep.correios.com.br/sistemas/buscacep/">Não sei meu CEP</a>
+
+            <div class="form-freight">
+              <label for="user-cep">Calcular frete</label>
+              <input id="user-cep" type="text">
+              <button class="submit-freight btn waves-effect blue-gradient waves-light modal-trigger" href="#freight-info">OK</button>
+            </div>
+
+            <div class="freight-info row hide">
+              <div class="col s6">
+                CEP <span class="user-cep"></span>
+                <a class="reset-freight grey-text">Alterar</a>
+              </div>
+              <div class="col s6 right-align"><b>R$ <span class="freight-value"></span></b></div>
+            </div>
+
           </div>
         </div>
 
         <div class="col s12 m7">
           <div class="product-final-info">
-            <table>
-              <tr>
-                <td>Fonte de Alimentação</td>
-                <td>R$ 49,99</td>
-              </tr>
-              <tr>
-                <td>Capa para Notebook</td>
-                <td>R$ 49,99</td>
-              </tr>
-              <tr>
-                <td>Carregador</td>
-                <td>R$ 49,99</td>
-              </tr>
-              <tr class="freight">
-                <td>Frete</td>
-                <td>R$ 23,90</td>
-              </tr>
-              <tr class="total">
-                <td>Total</td>
-                <td>R$ 173,87</td>
-              </tr>
-            </table>
+            <div class="row">
+              <div class="col s6">Subtotal</div>
+              <div class="col s6 right-align blue-text">
+                R$ <span data-value="149,97" class="price">149,97</span> ou
+                <br>R$ <span data-value="141,97" class="cash-price">141,97</span> à vista
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -245,14 +234,14 @@
         <div class="modal-content">
           <strong>Envio para Pernambuco (Caruaru)</strong>
           <p>
-            <input name="freight" type="radio" id="freight-opt-1" />
+            <input name="freight" type="radio" id="freight-opt-1" value="47,90"/>
             <label for="freight-opt-1">
               Expresso - <b>R$ 47,90</b><br>
               Chegará entre os dias 31/jan e 02/fev.
             </label>
           </p>
           <p>
-            <input name="freight" type="radio" id="freight-opt-2" />
+            <input name="freight" type="radio" id="freight-opt-2" value="23,90" checked />
             <label for="freight-opt-2">
               Normal - <b>R$ 23,90</b><br>
               Chegará entre os dias 6 e 8 de fevereiro.
@@ -260,8 +249,8 @@
           </p>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
-          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Fechar</a>
+          <a class="set-freight modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
+          <a class="modal-action modal-close waves-effect waves-red btn-flat">Fechar</a>
         </div>
       </div>
       <!-- Modal -->
@@ -416,7 +405,7 @@
             <img src="img/products/1-FONTE.jpg" alt="" class="product-img">
             <span class="card-title">Fontes de Alimentação</span>
             <a href="carrinho.html" class="btn-floating btn-large halfway-fab waves-effect waves-light blue darken-2">
-  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
           </div>
           <div class="card-content">
@@ -433,7 +422,7 @@
             <img src="img/products/2-FONTES.jpg" alt="" class="product-img">
             <span class="card-title">Carregadores</span>
             <a href="carrinho.html" class="btn-floating btn-large halfway-fab waves-effect waves-light blue darken-2">
-  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
           </div>
           <div class="card-content">
@@ -578,29 +567,58 @@
   }
 
   function refreshTotalValue() {
-    let totalValueArray = $('.cart-product .product-info .total-price')
+    let freightPrice = $('.product-freight .freight-value')
+    freightPrice = parseInt(freightPrice.text().replace(',', '').replace('R$', ''))
+    if(isNaN(freightPrice)){
+      freightPrice = 0
+    }
+
+    let totalValueArray = $('.cart-product .price')
     let totalValue = 0
     totalValueArray.each(function(index, item) {
       totalValue += parseInt(($(item).text()).replace(',', ''))
     })
-    totalValue += parseInt($('.product-final-info .freight td:last-child').text().replace(',', '').replace('R$', ''))
-    $('.product-final-info .total td:last-child').html('R$ ' + formatBRL(totalValue))
+    totalValue += freightPrice
+    $('.product-final-info .price').html('R$ ' + formatBRL(totalValue))
+
+
+    let cashValueArray = $('.cart-product .cash-price')
+    let cashValue = 0
+    cashValueArray.each(function(index, item) {
+      cashValue += parseInt(($(item).text()).replace(',', ''))
+    })
+    cashValue += freightPrice
+    $('.product-final-info .cash-price').html('R$ ' + formatBRL(cashValue))
   }
 
-  $('.item-qnt input[type=text]').on('input', function() {
+  $('.set-freight').click(function(){
+    let value = $('#freight-info [name=freight]:checked').val()
+    $('.product-freight .form-freight').addClass('hide')
+    $('.product-freight .freight-info').removeClass('hide')
+    $('.product-freight .user-cep').html($('#user-cep').val())
+    $('.product-freight .freight-value').html(value)
+    refreshTotalValue()
+  })
+
+  $('.reset-freight').click(function(){
+    $('.product-freight .form-freight').removeClass('hide')
+    $('.product-freight .freight-info').addClass('hide')
+    $('#user-cep').val('')
+  })
+
+  $('.item-qnt select').on('change', function() {
     let cartProduct = $(this).closest('.cart-product')
-    let value = cartProduct.find('.price').text()
+    let value = cartProduct.find('.price').attr('data-value')
+    let cashValue = cartProduct.find('.cash-price').attr('data-value')
     value = formatBRL(value.replace(',', '') * $(this).val())
-    cartProduct.find('.total-price').html(value)
-    $('.product-final-info tbody tr:nth-child(' + (cartProduct.index() + 1) + ') td:last-child')
-      .html('R$ ' + value)
+    cashValue = formatBRL(cashValue.replace(',', '') * $(this).val())
+    cartProduct.find('.price').html(value)
+    cartProduct.find('.cash-price').html(cashValue)
     refreshTotalValue()
   })
 
   $('.cart-product .delete-btn').click(function() {
-    let cartProduct = $(this).closest('.cart-product')
-    $('.product-final-info tbody tr:nth-child(' + (cartProduct.index() + 1) + ')').remove()
-    cartProduct.remove()
+    $(this).closest('.cart-product').remove()
     refreshTotalValue()
   })
 </script>
