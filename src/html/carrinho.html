@@ -197,7 +197,7 @@
             <div class="form-freight">
               <label for="user-cep">Calcular frete</label>
               <input id="user-cep" type="text">
-              <button class="submit-freight btn waves-effect blue-gradient waves-light modal-trigger" href="#freight-info">OK</button>
+              <button class="submit-freight btn waves-effect blue-gradient waves-light">OK</button>
             </div>
 
             <div class="freight-info row hide">
@@ -226,7 +226,7 @@
 
       <div class="cart-action-bar">
         <a href="home.html" class="btn waves-effect waves-light blue-gradient">Escolher Mais Produtos</a>
-        <a href="#register" class="btn waves-effect waves-light blue-gradient modal-trigger">Comprar</a>
+        <a href="login.html" class="btn waves-effect waves-light blue-gradient">Comprar</a>
       </div>
 
       <!-- Modal -->
@@ -259,15 +259,9 @@
 
 
       <!-- Modal -->
-      <div id="register" class="modal">
+      <!-- <div id="register" class="modal">
         <form action="" method="post">
           <div class="modal-content row">
-            <h4>Faça seu cadastro para finalizar a compra!</h4>
-
-            <div class="input-field col s12">
-              <input id="reg-email" name="email" type="email" class="validate" required>
-              <label for="reg-email">E-mail</label>
-            </div>
 
             <div class="input-field col s12">
               <input id="reg-name" name="name" type="text" class="validate" required>
@@ -351,7 +345,7 @@
             <button type="submit" class="modal-action waves-effect waves-green btn-flat">Continuar</button>
           </div>
         </form>
-      </div>
+      </div> -->
       <!-- Modal -->
 
 
@@ -494,23 +488,26 @@
 
 <!-- Custom Script -->
 <script>
-  // Gatilhos do JQuery mask
-  let phoneMaskBehavior = function(val) {
-    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-  }
-  let phoneOptions = {
-    onKeyPress: function(val, e, field, options) {
-      field.mask(phoneMaskBehavior.apply({}, arguments), options);
-    }
-  }
+  // // Gatilhos do JQuery mask
 
-  $('#user-cep, #reg-cep').mask('00000-000')
-  $('#reg-cpf').mask('000.000.000-00')
-  $('#reg-birth-date').mask('00/00/0099')
-  $('#reg-phone').mask(phoneMaskBehavior, phoneOptions);
-  $('#reg-credit-card').mask('9900-0000-0000-0000');
-  $('#reg-credit-card-expiration').mask('00/0099');
-  $('#reg-credit-card-code').mask('9000');
+  $('#user-cep').mask('00000-000')
+
+  // let phoneMaskBehavior = function(val) {
+  //   return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  // }
+  // let phoneOptions = {
+  //   onKeyPress: function(val, e, field, options) {
+  //     field.mask(phoneMaskBehavior.apply({}, arguments), options);
+  //   }
+  // }
+  //
+  // $('#reg-cep').mask('00000-000')
+  // $('#reg-cpf').mask('000.000.000-00')
+  // $('#reg-birth-date').mask('00/00/0099')
+  // $('#reg-phone').mask(phoneMaskBehavior, phoneOptions);
+  // $('#reg-credit-card').mask('9900-0000-0000-0000');
+  // $('#reg-credit-card-expiration').mask('00/0099');
+  // $('#reg-credit-card-code').mask('9000');
 
 
   responsiveCarousel = {
@@ -590,6 +587,14 @@
     cashValue += freightPrice
     $('.product-final-info .cash-price').html('R$ ' + formatBRL(cashValue))
   }
+
+  $('.submit-freight').click(function(){
+    if($('#user-cep').val().length === 9){
+      $('#freight-info').modal('open')
+    } else{
+      alert('Digite um CEP válido!')
+    }
+  })
 
   $('.set-freight').click(function(){
     let value = $('#freight-info [name=freight]:checked').val()

@@ -1,79 +1,23 @@
 @charset 'UTF-8';
 @import 'main';
 
-body {
-  background: url("http://www.aprimoraweb.com.br/wp-content/uploads/2017/03/img-background-criacao-de-lojas-virtuais.jpg") no-repeat fixed center;
-  background-size: cover;
-
-  > .container {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 400px;
-  }
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-h1 {
-  color: white;
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 6rem 0.5rem 0.5rem;
-}
+.login{
+  form{
+    [type=submit]{
+      margin: 0 auto;
+      display: block;
+      width: 80%;
 
-h2 {
-  color: white;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  margin: 0 0.5rem 5rem;
-}
-
-.login-form {
-  padding: 0 0.5rem;
-
-  .input-field {
-    background-color: rgba(255, 255, 255, .3);
-    padding: 0.5rem;
-    border-radius: 2px;
-
-    label {
-      color: white;
-      top: 0.5rem;
-      left: 0.5rem;
-      transform: none !important;
-    }
-
-    input {
-      width: 100%;
-      margin: 1.7rem 0 0;
-      color: white;
-      border: none;
-      font-size: 1.5rem;
-      background-color: transparent;
-      box-shadow: none;
-      border-bottom: 1px solid white !important;
-      outline: none;
-      transition: all 0.2s ease;
-
-      &:focus {
-        border-bottom-width: 2px !important;
+      & + a{
+        text-align: center;
+        display: block;
+        margin: 1rem 0 2rem;
       }
     }
-  }
-}
-
-.btn {
-  margin: 1rem auto;
-  width: 10rem;
-  display: block;
-  padding: 0;
-}
-
-.floating-buttons {
-  display: flex;
-  justify-content: center;
-
-  .btn-floating {
-    margin: 0 0.5rem;
-    @extend .blue-gradient;
   }
 }
