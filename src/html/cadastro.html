@@ -91,101 +91,124 @@
       <div class="row register">
         <div class="col s12 m8 offset-m2 l6 offset-l3">
           <div class="row">
-            <form action="">
+            <form action="entrega.html">
 
-              <!-- <h3>Tipo de conta</h3>
-              <p>
-                <input name="acc-type" type="radio" id="reg-acc-type" value="pessoa-fisica" checked/>
-                <label for="reg-acc-type">Pessoa física</label>
+              <div class="input-field col s10 m12">
+                <input required name="email" id="email" type="email" value="email@email.com">
+                <label for="email">E-mail</label>
+              </div>
+
+              <h3>Tipo de conta</h3>
+              <p class="col">
+                <input name="tipo-conta" type="radio" id="tipo-1" checked/>
+                <label for="tipo-1">Pessoa física</label>
+                <input name="tipo-conta" type="radio" id="tipo-2" />
+                <label for="tipo-2">Pessoa jurídica</label>
               </p>
-              <p>
-                <input name="acc-type" type="radio" id="reg-acc-type" value="pessoa-fisica" />
-                <label for="reg-acc-type">Pessoa jurídica</label>
-              </p> -->
+
+              <div class="dados-empresa wrapper hide">
+                <h3>Dados da empresa</h3>
+
+                <div class="input-field col s7">
+                  <input name="cnpj" id="cnpj" type="text">
+                  <label for="cnpj">CNPJ</label>
+                </div>
+
+                <div class="input-field col s11">
+                  <input name="razao-social" id="razao-social" type="text">
+                  <label for="razao-social">Razão Social</label>
+                </div>
+
+                <div class="input-field col s11">
+                  <input name="nome-fantasia" id="nome-fantasia" type="text">
+                  <label for="nome-fantasia">Nome Fantasia</label>
+                </div>
+
+                <div class="input-field col s7">
+                  <input name="inscricao-estadual" id="inscricao-estadual" type="text">
+                  <label for="inscricao-estadual">Inscrição Estadual</label>
+                </div>
+              </div>
+
 
               <h3>Dados pessoais</h3>
 
-              <div class="input-field col s10">
-                <input required name="email" id="reg-email" type="email" value="email@email.com">
-                <label for="reg-email">E-mail</label>
-              </div>
-
               <div class="input-field col s7">
-                <input required name="cpf" id="reg-cpf" type="text">
-                <label for="reg-cpf">CPF</label>
+                <input required name="cpf" id="cpf" type="text">
+                <label for="cpf">CPF</label>
               </div>
 
               <div class="input-field col s12">
-                <input required name="name" id="reg-name" type="text">
-                <label for="reg-name">Nome completo</label>
+                <input required name="nome" id="nome" type="text">
+                <label for="nome">Nome completo</label>
               </div>
 
               <div class="input-field col s6">
-                <input required name="birth-date" id="reg-birth-date" type="text">
-                <label for="reg-birth-date">Data de nascimento</label>
+                <input required name="data-nascimento" id="data-nascimento" type="text">
+                <label for="data-nascimento">Data de nascimento</label>
               </div>
 
               <div class="input-field col s7">
-                <input required name="password" id="reg-password" type="password">
-                <label for="reg-password">Senha</label>
+                <input required name="senha" id="senha" type="password">
+                <label for="senha">Senha</label>
               </div>
 
               <div class="input-field col s7">
-                <input required name="confirm-password" id="reg-confirm-password" type="password">
-                <label for="reg-confirm-password">Confirme a senha</label>
+                <input required name="confirmar-senha" id="confirmar-senha" type="password">
+                <label for="confirmar-senha">Confirme a senha</label>
               </div>
 
               <p>
-                <input type="checkbox" id="reg-phone-notif" name="phone-notif" />
-                <label for="reg-phone-notif">Quero receber ofertas e conteúdos por SMS no celular</label>
+                <input type="checkbox" id="alertas-sms" name="alertas-sms" />
+                <label for="alertas-sms">Quero receber ofertas e conteúdos por SMS no celular</label>
               </p>
               <p>
-                <input type="checkbox" id="reg-email-notif" name="email-notif" />
-                <label for="reg-email-notif">Quero receber ofertas e conteúdos por e-mail</label>
+                <input type="checkbox" id="alertas-email" name="alertas-email" />
+                <label for="alertas-email">Quero receber ofertas e conteúdos por e-mail</label>
               </p>
 
 
-              <h3 class="col s12">Endereço de cobrança</h3>
+              <h3>Endereço de cobrança</h3>
 
               <div class="input-field col s8">
-                <input required name="cep" id="reg-cep" type="text">
-                <label for="reg-cep">CEP</label>
+                <input required name="cep" id="cep" type="text">
+                <label for="cep">CEP</label>
               </div>
 
-              <div class="cep-form hide">
+              <div class="cep-form wrapper hide">
                 <div class="input-field col s11">
-                  <input required disabled name="address" id="reg-address" type="text">
-                  <label for="reg-address">Endereço</label>
+                  <input required disabled name="logradouro" id="logradouro" type="text">
+                  <label for="logradouro">Endereço</label>
                 </div>
 
                 <div class="input-field col s4">
-                  <input required name="number" id="reg-number" type="text">
-                  <label for="reg-number">Número</label>
+                  <input required name="numero" id="numero" type="text">
+                  <label for="numero">Número</label>
                 </div>
 
                 <div class="input-field col s7">
-                  <input required disabled name="district" id="reg-district" type="text">
-                  <label for="reg-district">Bairro</label>
+                  <input required disabled name="bairro" id="bairro" type="text">
+                  <label for="bairro">Bairro</label>
                 </div>
 
                 <div class="input-field col s10">
-                  <input required name="complement" id="reg-complement" type="text">
-                  <label for="reg-complement">Complemento</label>
+                  <input required name="complemento" id="complemento" type="text">
+                  <label for="complemento">Complemento</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input required disabled name="city" id="reg-city" type="text">
-                  <label for="reg-city">Cidade</label>
+                  <input required disabled name="cidade" id="cidade" type="text">
+                  <label for="cidade">Cidade</label>
                 </div>
 
                 <div class="input-field col s4">
-                  <input required disabled name="state" id="reg-state" type="text">
-                  <label for="reg-state">Estado</label>
+                  <input required disabled name="estado" id="estado" type="text">
+                  <label for="estado">Estado</label>
                 </div>
 
                 <div class="input-field col s7">
-                  <input required name="phone" id="reg-phone" type="text">
-                  <label for="reg-phone">Telefone celular</label>
+                  <input required name="telefone" id="telefone" type="text">
+                  <label for="telefone">Telefone celular</label>
                 </div>
               </div>
 
@@ -263,29 +286,41 @@
       field.mask(phoneMaskBehavior.apply({}, arguments), options);
     }
   }
-  $('#reg-cep').mask('00000-000')
-  $('#reg-cpf').mask('000.000.000-00')
-  $('#reg-birth-date').mask('00/00/0000')
-  $('#reg-number').mask('999999')
-  $('#reg-phone').mask(phoneMaskBehavior, phoneOptions)
+  $('#cep').mask('00000-000')
+  $('#cpf').mask('000.000.000-00')
+  $('#cnpj').mask('00.000.000/0000-00')
+  $('#data-nascimento').mask('00/00/0000')
+  $('#numero').mask('999999')
+  $('#telefone').mask(phoneMaskBehavior, phoneOptions)
+
+  // Mudar tipo de conta dinamicamente
+  $('#tipo-1').change(function() {
+    if($(this).is(':checked')){
+      $('.dados-empresa').addClass('hide')
+    }
+  })
+  $('#tipo-2').change(function() {
+    if($(this).is(':checked')){
+      $('.dados-empresa').removeClass('hide')
+    }
+  })
 
   // Preencher automaticamente com base no CEP
   function clearCepForm(text) {
     $('.cep-form input').val('')
     $('.cep-form').addClass('hide')
   }
-
-  $('#reg-cep').on('input', function() {
+  $('#cep').on('input', function() {
     var cep = $(this).val().replace(/\D/g, '')
     if (cep.length === 8) {
       if (/^[0-9]{8}$/.test(cep)) {
         $.getJSON('https://viacep.com.br/ws/' + cep + '/json/?callback=?', function(dados) {
           if (!('erro' in dados)) {
-            $('#reg-address').val(dados.logradouro)
-            $('#reg-district').val(dados.bairro)
-            $('#reg-city').val(dados.localidade)
-            $('#reg-state').val(dados.uf)
-            $('#reg-complement').val(dados.complemento)
+            $('#logradouro').val(dados.logradouro)
+            $('#bairro').val(dados.bairro)
+            $('#cidade').val(dados.localidade)
+            $('#estado').val(dados.uf)
+            $('#complemento').val(dados.complemento)
 
             Materialize.updateTextFields()
             $('.cep-form').removeClass('hide')

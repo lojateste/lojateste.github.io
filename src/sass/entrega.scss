@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+@import 'main';
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.login{
+  form{
+    [type=submit]{
+      margin: 0 auto;
+      display: block;
+      width: 80%;
+
+      & + a{
+        text-align: center;
+        display: block;
+        margin: 1rem 0 2rem;
+      }
+    }
+  }
+}
