@@ -234,7 +234,7 @@
         <div class="modal-content">
           <strong>Envio para Pernambuco (Caruaru)</strong>
           <p>
-            <input name="freight" type="radio" id="freight-opt-1" value="47,90"/>
+            <input name="freight" type="radio" id="freight-opt-1" value="47,90" />
             <label for="freight-opt-1">
               Expresso - <b>R$ 47,90</b><br>
               Chegará entre os dias 31/jan e 02/fev.
@@ -254,102 +254,6 @@
         </div>
       </div>
       <!-- Modal -->
-
-
-
-
-      <!-- Modal -->
-      <!-- <div id="register" class="modal">
-        <form action="" method="post">
-          <div class="modal-content row">
-
-            <div class="input-field col s12">
-              <input id="reg-name" name="name" type="text" class="validate" required>
-              <label for="reg-name">Nome Completo</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-cpf" name="cpf" type="text" class="validate" required>
-              <label for="reg-cpf">CPF</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-password" name="password" type="password" class="validate" required>
-              <label for="reg-password">Senha</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-password-confirm" name="password-confirm" type="password" class="validate" required>
-              <label for="reg-password-confirm">Confirme a senha</label>
-            </div>
-
-
-            <h2>Dados pessoais</h2>
-
-            <div class="input-field col s12">
-              <input id="reg-birth-date" name="birth-date" type="text" class="validate" required>
-              <label for="reg-birth-date">Data de nascimento</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-cep" name="cep" type="text" class="validate" required>
-              <label for="reg-cep">CEP</label>
-            </div>
-
-            <div class="input-field col s8">
-              <input id="reg-address" name="address" type="text" class="validate" required>
-              <label for="reg-address">Endereço</label>
-            </div>
-
-            <div class="input-field col s4">
-              <input id="reg-address-number" name="address-number" type="text" class="validate" required>
-              <label for="reg-address-number">Número</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-address-reference" name="address-reference" type="text" class="validate" required>
-              <label for="reg-address-reference">Referência</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-phone" name="phone" type="text" class="validate" required>
-              <label for="reg-phone">Telefone ou Celular</label>
-            </div>
-
-
-            <h2>Pagamento</h2>
-
-            <div class="input-field col s12">
-              <input id="reg-credit-card" name="credit-card" type="text" class="validate" required>
-              <label for="reg-credit-card">Cartão de crédito</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-credit-card-owner" name="credit-card-owner" type="text" class="validate" required>
-              <label for="reg-credit-card-owner">Titular do cartão</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-credit-card-expiration" name="credit-card-expiration" type="text" class="validate" required>
-              <label for="reg-credit-card-expiration">Data de vencimento</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input id="reg-credit-card-code" name="credit-card-code" type="text" class="validate" required>
-              <label for="reg-credit-card-code">Código de segurança</label>
-            </div>
-
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
-            <button type="submit" class="modal-action waves-effect waves-green btn-flat">Continuar</button>
-          </div>
-        </form>
-      </div> -->
-      <!-- Modal -->
-
-
-
 
 
       <!-- Carrinho -->
@@ -478,6 +382,8 @@
 
 <!-- Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+
+<!-- JQuery Mask -->
 <script src="js/jquery.mask.min.js"></script>
 
 <!-- OwlCarousel -->
@@ -488,26 +394,8 @@
 
 <!-- Custom Script -->
 <script>
-  // // Gatilhos do JQuery mask
-
+  // Gatilhos do JQuery mask
   $('#user-cep').mask('00000-000')
-
-  // let phoneMaskBehavior = function(val) {
-  //   return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-  // }
-  // let phoneOptions = {
-  //   onKeyPress: function(val, e, field, options) {
-  //     field.mask(phoneMaskBehavior.apply({}, arguments), options);
-  //   }
-  // }
-  //
-  // $('#reg-cep').mask('00000-000')
-  // $('#reg-cpf').mask('000.000.000-00')
-  // $('#reg-birth-date').mask('00/00/0099')
-  // $('#reg-phone').mask(phoneMaskBehavior, phoneOptions);
-  // $('#reg-credit-card').mask('9900-0000-0000-0000');
-  // $('#reg-credit-card-expiration').mask('00/0099');
-  // $('#reg-credit-card-code').mask('9000');
 
 
   responsiveCarousel = {
@@ -566,7 +454,7 @@
   function refreshTotalValue() {
     let freightPrice = $('.product-freight .freight-value')
     freightPrice = parseInt(freightPrice.text().replace(',', '').replace('R$', ''))
-    if(isNaN(freightPrice)){
+    if (isNaN(freightPrice)) {
       freightPrice = 0
     }
 
@@ -588,15 +476,15 @@
     $('.product-final-info .cash-price').html('R$ ' + formatBRL(cashValue))
   }
 
-  $('.submit-freight').click(function(){
-    if($('#user-cep').val().length === 9){
+  $('.submit-freight').click(function() {
+    if ($('#user-cep').val().length === 9) {
       $('#freight-info').modal('open')
-    } else{
+    } else {
       alert('Digite um CEP válido!')
     }
   })
 
-  $('.set-freight').click(function(){
+  $('.set-freight').click(function() {
     let value = $('#freight-info [name=freight]:checked').val()
     $('.product-freight .form-freight').addClass('hide')
     $('.product-freight .freight-info').removeClass('hide')
@@ -605,7 +493,7 @@
     refreshTotalValue()
   })
 
-  $('.reset-freight').click(function(){
+  $('.reset-freight').click(function() {
     $('.product-freight .form-freight').removeClass('hide')
     $('.product-freight .freight-info').addClass('hide')
     $('#user-cep').val('')

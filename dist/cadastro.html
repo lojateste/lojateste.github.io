@@ -1,1 +1,56 @@
-<!DOCTYPE html><html lang="pt-br"><head><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta charset="UTF-8"><title>Sua Loja</title></head><body><div class="container"><h1>Sua Loja</h1><h2>Cadastre-se agora e encontre os melhores preços</h2><form class="login-form" action="" method="post"><div class="input-field"><input id="name" name="name" autocomplete="off" class="browser-default" type="text" required><label for="name" class="active">Nome Completo</label></div><div class="input-field"><input id="email" name="email" autocomplete="off" class="browser-default" type="email" required><label for="email" class="active">Email</label></div><div class="input-field"><input id="password" name="password" autocomplete="off" class="browser-default" type="password" required><label for="password" class="active">Senha</label></div><div class="input-field"><input id="password-verification" name="password-verification" autocomplete="off" class="browser-default" type="password" required><label for="password-verification" class="active">Digite a sua senha novamente</label></div><button type="submit" class="btn waves-effect blue-gradient waves-light white-text">Registre-se</button></form><a href="login.html" class="btn waves-effect waves-light white black-text">Login</a><div class="floating-buttons"><div class="btn-floating waves-effect waves-light"><i class="fa fa-facebook" aria-hidden="true"></i></div><div class="btn-floating waves-effect waves-light"><i class="fa fa-google" aria-hidden="true"></i></div></div></div></body><!-- CSS --><link type="text/css" rel="stylesheet" href="css/login.css"><!-- JQuery --><!-- <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> --><!-- Materialize --><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script></html>
+<!DOCTYPE html><html lang="pt-br"><head><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta charset="UTF-8"><title>Sua Loja</title></head><body><nav class="nav-wrapper blue-gradient"><div class="container"><ul class="action-bar"><li><a class="open-side-nav btn-floating waves-effect waves-light" data-activates="side-nav"><i class="fa fa-bars" aria-hidden="true"></i></a></li><li class="spacer"></li><li class="home-btn"><a href="home.html" class="btn waves-effect waves-light">Sua Loja</a></li><li class="spacer"></li><li class="search-bar"><div class="overlay"></div><form action="pesquisa.html"><input type="text" autocomplete="off" placeholder="Olá, o que você procura?" class="browser-default z-depth-2" name="search"> <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button></form><ul class="search-list"><li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li><li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li><li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li><li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li><li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li><li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li></ul></li><li><a href="carrinho.html" class="btn-floating waves-effect waves-light"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li></ul></div></nav><aside><ul id="side-nav" class="side-nav blue-gradient"><li class="title"><a href="home.html">Home</a></li><li class="title"><a href="login.html">Login</a></li><li class="title"><a href="favoritos.html">Favoritos</a></li><li class="title"><a>Categorias</a></li><li><a href="categorias.html">Computadores</a></li><li class="no-padding"><ul class="collapsible collapsible-accordion"><li><a class="collapsible-header">Smartphones<i class="fa fa-caret-down right" aria-hidden="true"></i></a><div class="collapsible-body"><ul><li><a href="categorias.html">Motorola</a></li><li><a href="categorias.html">Apple</a></li><li><a href="categorias.html">Samsung<span class="new badge">4</span></a></li><li><a href="categorias.html">Xiaomi</a></li></ul></div></li></ul></li><li><a href="categorias.html">Notebooks<span class="new badge">2</span></a></li><li><a href="categorias.html">Acessórios</a></li></ul></aside><main id="main"><div class="container"><h2>Quero criar uma conta</h2><div class="row register"><div class="col s12 m8 offset-m2 l6 offset-l3"><div class="row"><form action=""><!-- <h3>Tipo de conta</h3>
+              <p>
+                <input name="acc-type" type="radio" id="reg-acc-type" value="pessoa-fisica" checked/>
+                <label for="reg-acc-type">Pessoa física</label>
+              </p>
+              <p>
+                <input name="acc-type" type="radio" id="reg-acc-type" value="pessoa-fisica" />
+                <label for="reg-acc-type">Pessoa jurídica</label>
+              </p> --><h3>Dados pessoais</h3><div class="input-field col s10"><input required name="email" id="reg-email" type="email" value="email@email.com"><label for="reg-email">E-mail</label></div><div class="input-field col s7"><input required name="cpf" id="reg-cpf" type="text"><label for="reg-cpf">CPF</label></div><div class="input-field col s12"><input required name="name" id="reg-name" type="text"><label for="reg-name">Nome completo</label></div><div class="input-field col s6"><input required name="birth-date" id="reg-birth-date" type="text"><label for="reg-birth-date">Data de nascimento</label></div><div class="input-field col s7"><input required name="password" id="reg-password" type="password"><label for="reg-password">Senha</label></div><div class="input-field col s7"><input required name="confirm-password" id="reg-confirm-password" type="password"><label for="reg-confirm-password">Confirme a senha</label></div><p><input type="checkbox" id="reg-phone-notif" name="phone-notif"><label for="reg-phone-notif">Quero receber ofertas e conteúdos por SMS no celular</label></p><p><input type="checkbox" id="reg-email-notif" name="email-notif"><label for="reg-email-notif">Quero receber ofertas e conteúdos por e-mail</label></p><h3 class="col s12">Endereço de cobrança</h3><div class="input-field col s8"><input required name="cep" id="reg-cep" type="text"><label for="reg-cep">CEP</label></div><div class="cep-form hide"><div class="input-field col s11"><input required disabled="disabled" name="address" id="reg-address" type="text"><label for="reg-address">Endereço</label></div><div class="input-field col s4"><input required name="number" id="reg-number" type="text"><label for="reg-number">Número</label></div><div class="input-field col s7"><input required disabled="disabled" name="district" id="reg-district" type="text"><label for="reg-district">Bairro</label></div><div class="input-field col s10"><input required name="complement" id="reg-complement" type="text"><label for="reg-complement">Complemento</label></div><div class="input-field col s6"><input required disabled="disabled" name="city" id="reg-city" type="text"><label for="reg-city">Cidade</label></div><div class="input-field col s4"><input required disabled="disabled" name="state" id="reg-state" type="text"><label for="reg-state">Estado</label></div><div class="input-field col s7"><input required name="phone" id="reg-phone" type="text"><label for="reg-phone">Telefone celular</label></div></div><button class="btn waves-effect waves-light blue-gradient col s4 offset-s4" type="submit">Continuar</button></form></div></div></div></div></main><footer class="page-footer blue-gradient"><div class="container"><strong>Precisa de ajuda?</strong><br><br><span>Atendimento por e-mail, telefone e dúvidas frequentes.</span> <a href="">Clique aqui.</a><br><hr><strong>Conecte-se conosco</strong><br><div class="center-align"><a class="btn-floating btn-large waves-effect white"><i class="fa fa-facebook blue-text text-darken-2"></i> </a><a class="btn-floating btn-large waves-effect white"><i class="fa fa-instagram blue-text text-darken-2"></i> </a><a class="btn-floating btn-large waves-effect white"><i class="fa fa-phone blue-text text-darken-2"></i></a></div><hr><span>Todas as regras e promoções são válidas apenas para produtos vendidos e entregues por Sua Loja. O valor de oferta do produto seŕa garantido após a finalização da compra. Havendo divergência, prevalecerá o menor preço ofertado.</span><br><br></div><div class="footer-copyright"><div class="container">© 2018 Sua Loja. Todos os Direitos Reservados</div></div></footer></body><!-- CSS --><link type="text/css" rel="stylesheet" href="css/cadastro.css"><!-- JQuery --><script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script><!-- Materialize --><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script><!-- JQuery Mask --><script src="js/jquery.mask.min.js"></script><!-- JavaScript --><script src="js/main.js"></script><!-- Custom Script --><script>// Gatilhos do JQuery Mask
+  let phoneMaskBehavior = function(val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  }
+  let phoneOptions = {
+    onKeyPress: function(val, e, field, options) {
+      field.mask(phoneMaskBehavior.apply({}, arguments), options);
+    }
+  }
+  $('#reg-cep').mask('00000-000')
+  $('#reg-cpf').mask('000.000.000-00')
+  $('#reg-birth-date').mask('00/00/0000')
+  $('#reg-number').mask('999999')
+  $('#reg-phone').mask(phoneMaskBehavior, phoneOptions)
+
+  // Preencher automaticamente com base no CEP
+  function clearCepForm(text) {
+    $('.cep-form input').val('')
+    $('.cep-form').addClass('hide')
+  }
+
+  $('#reg-cep').on('input', function() {
+    var cep = $(this).val().replace(/\D/g, '')
+    if (cep.length === 8) {
+      if (/^[0-9]{8}$/.test(cep)) {
+        $.getJSON('https://viacep.com.br/ws/' + cep + '/json/?callback=?', function(dados) {
+          if (!('erro' in dados)) {
+            $('#reg-address').val(dados.logradouro)
+            $('#reg-district').val(dados.bairro)
+            $('#reg-city').val(dados.localidade)
+            $('#reg-state').val(dados.uf)
+            $('#reg-complement').val(dados.complemento)
+
+            Materialize.updateTextFields()
+            $('.cep-form').removeClass('hide')
+          } else {
+            clearCepForm()
+            alert('CEP não encontrado.')
+          }
+        })
+      } else {
+        clearCepForm()
+        alert('Formato de CEP inválido.')
+      }
+    } else {
+      clearCepForm()
+    }
+  })</script></html>

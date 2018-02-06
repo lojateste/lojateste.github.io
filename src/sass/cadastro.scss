@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+@import 'main';
+
+h3 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.register {
+  form > *:not(.cep-form) {
+    @extend .col;
+  }
+}
