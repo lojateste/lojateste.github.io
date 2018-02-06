@@ -86,70 +86,20 @@
   <main id="main">
     <div class="container">
 
-      <div class="row delivery">
-        <div class="col s12 m8 offset-m2 l6 offset-l3">
-          <div class="row">
-            <form action="pagamento.html">
+      <h2>Seu pedido foi finalizado com sucesso</h2>
 
-              <h3>Opções de entrega</h3>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Número do pedido</h3>
+          <p><strong>6100500353403392</strong></p>
+          <a href="" class="btn waves-effect waves-light blue-gradient">Imprimir comprovante</a>
+        </div>
 
-              <div class="input-field col s12">
-                <input required name="nome" id="nome" type="text">
-                <label for="nome">Nome do Responsável</label>
-              </div>
-
-              <div class="input-field col s7">
-                <input required name="cpf" id="cpf" type="text">
-                <label for="cpf">CPF</label>
-              </div>
-
-              <div class="input-field col s8">
-                <input required name="cep" id="cep" type="text">
-                <label for="cep">CEP</label>
-              </div>
-
-              <div class="cep-form wrapper">
-                <div class="input-field col s11">
-                  <input required disabled name="logradouro" id="logradouro" type="text">
-                  <label for="logradouro">Endereço</label>
-                </div>
-
-                <div class="input-field col s4">
-                  <input required name="numero" id="numero" type="text">
-                  <label for="numero">Número</label>
-                </div>
-
-                <div class="input-field col s7">
-                  <input required disabled name="bairro" id="bairro" type="text">
-                  <label for="bairro">Bairro</label>
-                </div>
-
-                <div class="input-field col s10">
-                  <input required name="complemento" id="complemento" type="text">
-                  <label for="complemento">Complemento</label>
-                </div>
-
-                <div class="input-field col s6">
-                  <input required disabled name="cidade" id="cidade" type="text">
-                  <label for="cidade">Cidade</label>
-                </div>
-
-                <div class="input-field col s4">
-                  <input required disabled name="estado" id="estado" type="text">
-                  <label for="estado">Estado</label>
-                </div>
-
-                <div class="input-field col s7">
-                  <input required name="telefone" id="telefone" type="text">
-                  <label for="telefone">Telefone celular</label>
-                </div>
-              </div>
-
-              <button class="btn waves-effect waves-light blue-gradient col s4 offset-s4" type="submit">
-                Continuar
-              </button>
-            </form>
-          </div>
+        <div class="col s12 m6">
+          <p>Total (produtos + frete): <span class="blue-text">R$ 493,88</span></p>
+          <p>Entrega em até 8 dias úteis</p>
+          <p>Pagamento: Boleto bancário <span class="blue-text">(Vencimento: 08/02/2018)</span></p>
+          <a href="" class="btn waves-effect waves-light blue-gradient">Imprimir boleto</a>
         </div>
       </div>
 
@@ -194,7 +144,7 @@
 
 
 <!-- CSS -->
-<link type="text/css" rel="stylesheet" href="css/entrega.css">
+<link type="text/css" rel="stylesheet" href="css/concluir-pedido.css">
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
@@ -202,59 +152,10 @@
 <!-- Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
 
-<!-- JQuery Mask -->
-<script src="js/jquery.mask.min.js"></script>
-
 <!-- JavaScript -->
 <script src="js/main.js"></script>
 
 <!-- Custom Script -->
-<script>
-  // Gatilhos do JQuery Mask
-  let phoneMaskBehavior = function(val) {
-    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-  }
-  let phoneOptions = {
-    onKeyPress: function(val, e, field, options) {
-      field.mask(phoneMaskBehavior.apply({}, arguments), options);
-    }
-  }
-  $('#cep').mask('00000-000')
-  $('#cpf').mask('000.000.000-00')
-  $('#numero').mask('999999')
-  $('#telefone').mask(phoneMaskBehavior, phoneOptions)
-
-  // Preencher automaticamente com base no CEP
-  function clearCepForm(text) {
-    $('.cep-form input').val('')
-    Materialize.updateTextFields()
-  }
-  $('#cep').on('input', function() {
-    var cep = $(this).val().replace(/\D/g, '')
-    if (cep.length === 8) {
-      if (/^[0-9]{8}$/.test(cep)) {
-        $.getJSON('https://viacep.com.br/ws/' + cep + '/json/?callback=?', function(dados) {
-          if (!('erro' in dados)) {
-            $('#logradouro').val(dados.logradouro)
-            $('#bairro').val(dados.bairro)
-            $('#cidade').val(dados.localidade)
-            $('#estado').val(dados.uf)
-            $('#complemento').val(dados.complemento)
-
-            Materialize.updateTextFields()
-          } else {
-            clearCepForm()
-            alert('CEP não encontrado.')
-          }
-        })
-      } else {
-        clearCepForm()
-        alert('Formato de CEP inválido.')
-      }
-    } else {
-      clearCepForm()
-    }
-  })
-</script>
+<script></script>
 
 </html>
