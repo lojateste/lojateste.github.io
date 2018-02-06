@@ -16,6 +16,14 @@
     padding: 1rem;
     margin-bottom: 3rem;
 
+    .row {
+      margin-bottom: 0;
+    }
+
+    .product-img{
+      max-height: 100%;
+    }
+
     .delete-btn {
       position: absolute;
       top: -15px;
@@ -34,6 +42,27 @@
 
       p {
         margin: 0;
+      }
+    }
+    @media #{$large-and-up} {
+      margin-bottom: -0.1rem;
+
+      .delete-btn{
+        top: 5px;
+      }
+
+      > .row {
+        height: 6rem;
+      }
+
+      .valign-on-large {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .product-info{
+        text-align: left;
       }
     }
   }
