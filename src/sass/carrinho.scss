@@ -6,6 +6,10 @@
 .product-cart {
   margin-bottom: 0;
 
+  select.browser-default {
+    background: transparent;
+  }
+
   .cart-product {
     position: relative;
     @extend .card;
@@ -42,10 +46,9 @@
 
   .btn {
     margin-bottom: 1rem;
-
     @media #{$small-and-down} {
       width: 80%;
-      margin: .5rem 10%;
+      margin: 0.5rem 10%;
     }
   }
 }
