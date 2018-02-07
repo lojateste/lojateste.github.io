@@ -3,8 +3,74 @@
 @import 'owl.carousel.scss';
 @import 'main';
 
-.back-layer{
-  z-index: -1000 !important; 
+.back-layer {
+  z-index: -1000 !important;
+}
+
+.share-buttons {
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+
+  .btn {
+    @extend .blue;
+    @extend .darken-2;
+    position: absolute;
+    transition: all 0.2s ease;
+
+    &:not(.btn-share) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .btn-share {
+    top: 0;
+    right: 0;
+  }
+
+  .btn-whatsapp {
+    top: -79px;
+    right: 0;
+  }
+
+  .btn-facebook {
+    top: -56px;
+    right: 56px;
+  }
+
+  .btn-twitter {
+    top: 0;
+    right: 79px;
+  }
+
+  .btn-google-plus {
+    top: 56px;
+    right: 56px;
+  }
+
+  .btn-pinterest {
+    top: 79px;
+    right: 0;
+  }
+
+  &:hover {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 216px;
+      height: 216px;
+      top: -80px;
+      left: -136px;
+      border-radius: 500px;
+      z-index: 1;
+    }
+
+    .btn {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
 .product-details {
@@ -15,8 +81,10 @@
     position: relative;
 
     .btn-fav {
+      @extend .blue;
+      @extend .darken-2;
       position: absolute;
-      top: 1rem;
+      top: 5px;
       right: 2rem;
     }
   }
@@ -76,20 +144,20 @@
     }
   }
 
-  .input-field{
+  .input-field {
     margin: 3rem 0 2rem;
     padding: 2rem 1rem 1px;
     border-radius: 2px;
     @extend .z-depth-2;
 
-    label{
+    label {
       left: 1rem;
       top: 1rem;
       transform: none;
     }
   }
 
-  .collapsible{
+  .collapsible {
     @extend .z-depth-2;
     border-radius: 2px;
     border: none;
