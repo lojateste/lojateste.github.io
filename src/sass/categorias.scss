@@ -29,10 +29,10 @@
 
     .card-title {
       margin: 0;
-      padding: 0;
+      padding: 0 1rem;
       background-color: transparent;
       color: #444;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       line-height: initial;
     }
     @media #{$medium-and-up} {
