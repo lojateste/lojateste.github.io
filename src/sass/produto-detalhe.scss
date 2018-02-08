@@ -32,6 +32,11 @@
   .btn-whatsapp {
     top: -79px;
     right: 0;
+
+     @media #{$medium-and-up} {
+       display: none;
+       visibility: hidden;
+     }
   }
 
   .btn-facebook {
@@ -94,7 +99,7 @@
 
     > h1 {
       font-size: 2rem;
-      margin-bottom: 0;
+      margin: 1rem 0;
 
       & + h2 {
         margin-top: 0.7rem;

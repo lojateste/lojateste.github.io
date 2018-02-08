@@ -223,14 +223,11 @@ label {
 
   .card-image {
     color: #444;
+  }
 
-    .card-title {
-      background-color: rgba(0,0,0,.7);
-      font-size: 1.3em;
-      border-radius: 2px;
-      padding: 5px 12px;
-      margin: 20px 10px;
-    }
+  .card-title {
+    font-size: 1.3rem;
+    line-height: 1.5 !important;
   }
 
   .btn-floating {

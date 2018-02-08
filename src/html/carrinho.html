@@ -99,10 +99,10 @@
                 <i class="fa fa-close grey-text" aria-hidden="true"></i>
               </div>
               <div class="col s4 l2 valign-on-large">
-                <img src="img/products/1-FONTE.jpg" alt="" class="product-img">
+                <img src="img/products/2-PLACAVIDEO.jpg" alt="" class="product-img">
               </div>
               <div class="col s8 l5 valign-on-large">
-                <h3 class="card-title">Fonte de Alimentação</h3>
+                <h3 class="card-title">Gpu R5 230 2gb Core Radeon 128bits Ddr3 650m Xfx R5-230a-clf</h3>
               </div>
               <div class="col s4 l2 valign-on-large">
                 <div class="item-qnt">
@@ -137,7 +137,7 @@
                 <img src="img/products/1-CAPANOTEBOOK.jpg" alt="" class="product-img">
               </div>
               <div class="col s8 l5 valign-on-large">
-                <h3 class="card-title">Capa para Notebook</h3>
+                <h3 class="card-title">Case Nylon Multilaser para Tablet e Netbook Dupla Camada Ate 10Pol</h3>
               </div>
               <div class="col s4 l2 valign-on-large">
                 <div class="item-qnt">
@@ -169,10 +169,10 @@
                 <i class="fa fa-close grey-text" aria-hidden="true"></i>
               </div>
               <div class="col s4 l2 valign-on-large">
-                <img src="img/products/2-FONTES.jpg" alt="" class="product-img">
+                <img src="img/products/11-MEMORIASSD.jpg" alt="" class="product-img">
               </div>
               <div class="col s8 l5 valign-on-large">
-                <h3 class="card-title">Carregador</h3>
+                <h3 class="card-title">Hd Ssd 240gb Sata 3 Kingston A400 Mais Novo Que Uv400</h3>
               </div>
               <div class="col s4 l2 valign-on-large">
                 <div class="item-qnt">
@@ -214,7 +214,7 @@
                 CEP <span class="user-cep"></span>
                 <a class="reset-freight grey-text">Alterar</a>
               </div>
-              <div class="col s6 right-align"><b>R$ <span class="freight-value"></span></b></div>
+              <div class="col s6 right-align"><b><span class="freight-value"></span></b></div>
             </div>
 
           </div>
@@ -235,7 +235,7 @@
 
       <div class="cart-action-bar">
         <a href="home.html" class="btn waves-effect waves-light blue-gradient">Escolher Mais Produtos</a>
-        <a href="login.html" class="btn waves-effect waves-light blue-gradient">Comprar</a>
+        <a href="login.html" class="buy-btn btn waves-effect waves-light green">Comprar</a>
       </div>
 
       <!-- Modal -->
@@ -243,23 +243,50 @@
         <div class="modal-content">
           <strong>Envio para Pernambuco (Caruaru)</strong>
           <p>
-            <input name="freight" type="radio" id="freight-opt-1" value="47,90" />
-            <label for="freight-opt-1">
-              Expresso - <b>R$ 47,90</b><br>
-              Chegará entre os dias 31/jan e 02/fev.
+            <input name="freight" type="radio" id="freight-opt-0" value="0" />
+            <!-- não mudar o id deste elemento -->
+            <label for="freight-opt-0">
+              Retirar da loja - <b>Grátis</b><br>
+              A partir de 2 dias úteis.
             </label>
           </p>
           <p>
-            <input name="freight" type="radio" id="freight-opt-2" value="23,90" checked />
-            <label for="freight-opt-2">
+            <input name="freight" type="radio" id="freight-opt-1" value="23,90" checked />
+            <label for="freight-opt-1">
               Normal - <b>R$ 23,90</b><br>
               Chegará entre os dias 6 e 8 de fevereiro.
+            </label>
+          </p>
+          <p>
+            <input name="freight" type="radio" id="freight-opt-2" value="47,90" />
+            <label for="freight-opt-2">
+              Expresso - <b>R$ 47,90</b><br>
+              Chegará entre os dias 31/jan e 02/fev.
             </label>
           </p>
         </div>
         <div class="modal-footer">
           <a class="set-freight modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
           <a class="modal-action modal-close waves-effect waves-red btn-flat">Fechar</a>
+        </div>
+      </div>
+      <!-- Modal -->
+
+      <!-- Modal -->
+      <div id="select-store" class="modal">
+        <div class="modal-content">
+          <div class="input-field">
+            <select>
+              <option value="caruaru" selected>Caruaru</option>
+              <option value="recife">Recife</option>
+              <option value="petrolina">Petrolina</option>
+            </select>
+            <label>Selecione uma loja</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
+          <!-- <a class="modal-action modal-close waves-effect waves-red btn-flat">Fechar</a> -->
         </div>
       </div>
       <!-- Modal -->
@@ -520,11 +547,18 @@
   })
 
   $('.set-freight').click(function() {
+    if($('#freight-opt-0:checked').length){
+      $('#select-store').modal('open')
+    }
     let value = $('#freight-info [name=freight]:checked').val()
     $('.product-freight .form-freight').addClass('hide')
     $('.product-freight .freight-info').removeClass('hide')
     $('.product-freight .user-cep').html($('#user-cep').val())
-    $('.product-freight .freight-value').html(value)
+    if(value != 0){
+      $('.product-freight .freight-value').html('R$ ' + value)
+    }else{
+      $('.product-freight .freight-value').html('Grátis')
+    }
     refreshTotalValue()
   })
 
