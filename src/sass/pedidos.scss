@@ -1,0 +1,154 @@
+@charset 'UTF-8';
+@import 'main';
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.select-label,
+.select-label + select {
+  position: relative;
+  top: -10px;
+}
+
+.order-delivered a {
+  color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .big {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  p {
+    margin: 0.4rem 0;
+  }
+
+  .card-image {
+    flex: 0 0 50%;
+    padding: 1rem 0.5rem 0.5rem 1rem;
+
+    img {
+      max-height: 10rem;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+
+  .order-delivery {
+    flex: 0 0 50%;
+    padding: 1rem 1rem 0.5rem 0.5rem;
+    text-align: center;
+
+    .big {
+      font-size: 4em;
+      line-height: 4rem;
+      display: block;
+    }
+  }
+
+  .status {
+    flex: 0 0 50%;
+    padding: 0.5rem 0.5rem 1rem 1rem;
+    align-items: center;
+  }
+
+  .info {
+    flex: 0 0 50%;
+    padding: 0.5rem 1rem 1rem 0.5rem;
+    text-align: right;
+  }
+}
+
+.delivery-steps {
+  li {
+    margin-bottom: 1rem;
+    display: flex;
+
+    .btn-floating {
+      @extend .blue;
+      flex: 0 0 auto;
+    }
+
+    .step-desc {
+      margin-left: 1rem;
+      flex: 1 1 auto;
+      background-color: #ddd;
+      padding: 0.5rem 1rem;
+
+      &:before {
+        content: '';
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        transform: translate(-21px, 14px) rotate(45deg);
+        background-color: #ddd;
+      }
+
+      .step-date {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: .4rem;
+      }
+    }
+  }
+}
+
+.details-product {
+  .info {
+    .item {
+      background-color: #ddd;
+      padding: 1rem;
+      text-align: center;
+
+      &.big {
+        @extend .red-text;
+        line-height: 42px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+@media #{$medium-and-up} {
+  .order-delivered a {
+    padding: 1rem 0.5rem;
+
+    .card-image {
+      flex: 1 1 25%;
+      padding: 0 0.5rem;
+    }
+
+    .order-delivery {
+      flex: 0 1 20%;
+      padding: 0 0.5rem;
+    }
+
+    .status {
+      flex: 1 0 30%;
+      padding: 0 0.5rem;
+    }
+
+    .info {
+      padding: 0 0.5rem;
+      flex: 1 1 25%;
+      text-align: left;
+    }
+  }
+}
+@media #{$large-and-up} {
+  .order-delivered a {
+    .card-image,
+    .info,
+    .order-delivery,
+    .status {
+      flex: 0 0 25%;
+    }
+  }
+}
