@@ -121,7 +121,7 @@
 
             <button class="btn waves-effect waves-light blue-gradient" type="submit">Continuar</button>
 
-            <a href="" class="center-align">Esqueci meu email ou a senha</a>
+            <a href="#recover-password" class="center-align modal-trigger">Esqueci minha senha</a>
           </form>
         </div>
 
@@ -129,6 +129,23 @@
 
     </div>
   </main>
+
+  <div id="recover-password" class="modal">
+    <form action="">
+      <div class="modal-content">
+        <div class="input-field">
+          <input id="recovery-email" name="login" type="text" required>
+          <label for="recovery-email">E-mail, CPF ou CNPJ</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="modal-action waves-effect waves-green btn-flat">Recuperar Senha</button>
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
+      </div>
+    </form>
+  </div>
+
+
 
 
   <footer class="page-footer blue-gradient">
@@ -180,6 +197,8 @@
 <script src="js/main.js"></script>
 
 <!-- Custom Script -->
-<script></script>
+<script>
+  $('.modal').modal();
+</script>
 
 </html>

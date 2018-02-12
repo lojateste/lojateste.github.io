@@ -82,68 +82,6 @@
     </ul>
   </aside>
 
-  <aside>
-    <ul id="category-filter" class="collapsible side-nav" data-collapsible="expandable">
-      <li>
-        <div class="collapsible-header active">
-          <i class="fa placeholder" aria-hidden="true"></i> Ordenar Por
-        </div>
-        <div class="collapsible-body">
-          <p>
-            <input name="ordenar" type="radio" id="ordenar-01" />
-            <label for="ordenar-01">Preço</label>
-          </p>
-          <p>
-            <input name="ordenar" type="radio" id="ordenar-02" />
-            <label for="ordenar-02">Data de Lançamento</label>
-          </p>
-          <p>
-            <input name="ordenar" type="radio" id="ordenar-03" />
-            <label for="ordenar-03">Mais Vendidos</label>
-          </p>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header active">
-          <i class="fa placeholder" aria-hidden="true"></i> Marca
-        </div>
-        <div class="collapsible-body">
-          <p>
-            <input type="checkbox" id="marca-01" />
-            <label for="marca-01">Microsoft</label>
-          </p>
-          <p>
-            <input type="checkbox" id="marca-02" />
-            <label for="marca-02">Sony</label>
-          </p>
-          <p>
-            <input type="checkbox" id="marca-03" />
-            <label for="marca-03">Acer</label>
-          </p>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header active">
-          <i class="fa placeholder" aria-hidden="true"></i> Preço
-        </div>
-        <div class="collapsible-body">
-          <p>
-            <input type="checkbox" id="preco-01" />
-            <label for="preco-01">Até R$ 272,00</label>
-          </p>
-          <p>
-            <input type="checkbox" id="preco-02" />
-            <label for="preco-02">R$ 272,00 a R$ 544,00</label>
-          </p>
-          <p>
-            <input type="checkbox" id="preco-03" />
-            <label for="preco-03">Acima de R$ 544,00</label>
-          </p>
-        </div>
-      </li>
-    </ul>
-  </aside>
-
 
 
   <main id="main">
@@ -154,285 +92,350 @@
       </button>
 
       <h2>Categoria</h2>
-
-      <div class="product-list row">
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/4-PLACA-MAE.jpg" alt="" class="product-img">
+      <div class="row">
+        <aside id="category-filter">
+          <ul class="collapsible" data-collapsible="expandable">
+            <li>
+              <div class="collapsible-header active">
+                <i class="fa placeholder" aria-hidden="true"></i> Ordenar Por
               </div>
-              <div class="card-content">
-                <span class="card-title">Placa Mãe Gigabyte Ga-h81m-s1 Lga 1150 Ddr3 Vga Micro Atx</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
+              <div class="collapsible-body">
+                <p>
+                  <input name="ordenar" type="radio" id="ordenar-01" />
+                  <label for="ordenar-01">Preço</label>
+                </p>
+                <p>
+                  <input name="ordenar" type="radio" id="ordenar-02" />
+                  <label for="ordenar-02">Data de Lançamento</label>
+                </p>
+                <p>
+                  <input name="ordenar" type="radio" id="ordenar-03" />
+                  <label for="ordenar-03">Mais Vendidos</label>
+                </p>
               </div>
-            </a>
+            </li>
+            <li>
+              <div class="collapsible-header active">
+                <i class="fa placeholder" aria-hidden="true"></i> Marca
+              </div>
+              <div class="collapsible-body">
+                <p>
+                  <input type="checkbox" id="marca-01" />
+                  <label for="marca-01">Microsoft</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="marca-02" />
+                  <label for="marca-02">Sony</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="marca-03" />
+                  <label for="marca-03">Acer</label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header active">
+                <i class="fa placeholder" aria-hidden="true"></i> Preço
+              </div>
+              <div class="collapsible-body">
+                <p>
+                  <input type="checkbox" id="preco-01" />
+                  <label for="preco-01">Até R$ 272,00</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="preco-02" />
+                  <label for="preco-02">R$ 272,00 a R$ 544,00</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="preco-03" />
+                  <label for="preco-03">Acima de R$ 544,00</label>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="col s12 m8 l9">
+          <div class="product-list row">
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/4-PLACA-MAE.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Placa Mãe Gigabyte Ga-h81m-s1 Lga 1150 Ddr3 Vga Micro Atx</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/5-PROCESSADORES.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Cpu Dell Mini Optiplex 210l Pentium 2gb Hd 80g Dvd Wifi</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/6-PLACA-CAPTURA.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Placa Captura Avermedia Live Gamer Portable Lite Lgp Gl310</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/7-PLACA-SOM.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Placa De Som Usb Externa 5.1 6 Canais Spdif Notebook Pc Mac</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/2-PLACAVIDEO.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title"> Gpu R5 230 2gb Core Radeon 128bits Ddr3 650m Xfx R5-230a-clf </span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/11-MEMORIASSD.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title"> Hd Ssd 240gb Sata 3 Kingston A400 Mais Novo Que Uv400 </span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/3-COOLEER.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Mini Geladeira Cooler Auto 7l Tv008 12volts Multilaser</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/4-PELICULAS.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Película De Vidro No Atacado Todos Modelos Cada Unidade</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/4-PLACA-MAE.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Placa Mãe Gigabyte Ga-h81m-s1 Lga 1150 Ddr3 Vga Micro Atx</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/5-PROCESSADORES.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Cpu Dell Mini Optiplex 210l Pentium 2gb Hd 80g Dvd Wifi</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/6-PLACA-CAPTURA.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Placa Captura Avermedia Live Gamer Portable Lite Lgp Gl310</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s6 l4">
+              <div class="product-card hoverable card">
+                <a href="produto-detalhe.html">
+                  <div class="card-image">
+                    <img src="img/products/7-PLACA-SOM.jpg" alt="" class="product-img">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Placa De Som Usb Externa 5.1 6 Canais Spdif Notebook Pc Mac</span>
+                    <div class="product-rating">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star empty" aria-hidden="true"></i>
+                    </div>
+                    <br><b>Ofertas a partir de:</b>
+                    <br><span class="product-price">R$ 49,99</span>
+                    <br><span>10x de R$ 4,99 sem juros</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/5-PROCESSADORES.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Cpu Dell Mini Optiplex 210l Pentium 2gb Hd 80g Dvd Wifi</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/6-PLACA-CAPTURA.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Placa Captura Avermedia Live Gamer Portable Lite Lgp Gl310</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/7-PLACA-SOM.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Placa De Som Usb Externa 5.1 6 Canais Spdif Notebook Pc Mac</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/2-PLACAVIDEO.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title"> Gpu R5 230 2gb Core Radeon 128bits Ddr3 650m Xfx R5-230a-clf </span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/11-MEMORIASSD.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title"> Hd Ssd 240gb Sata 3 Kingston A400 Mais Novo Que Uv400 </span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/3-COOLEER.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Mini Geladeira Cooler Auto 7l Tv008 12volts Multilaser</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/4-PELICULAS.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Película De Vidro No Atacado Todos Modelos Cada Unidade</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/4-PLACA-MAE.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Placa Mãe Gigabyte Ga-h81m-s1 Lga 1150 Ddr3 Vga Micro Atx</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/5-PROCESSADORES.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Cpu Dell Mini Optiplex 210l Pentium 2gb Hd 80g Dvd Wifi</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/6-PLACA-CAPTURA.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Placa Captura Avermedia Live Gamer Portable Lite Lgp Gl310</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col s6 m4 l3">
-          <div class="product-card hoverable card">
-            <a href="produto-detalhe.html">
-              <div class="card-image">
-                <img src="img/products/7-PLACA-SOM.jpg" alt="" class="product-img">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Placa De Som Usb Externa 5.1 6 Canais Spdif Notebook Pc Mac</span>
-                <div class="product-rating">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star empty" aria-hidden="true"></i>
-                </div>
-                <br><b>Ofertas a partir de:</b>
-                <br><span class="product-price">R$ 49,99</span>
-                <br><span>10x de R$ 4,99 sem juros</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
       </div>
 
       <ul class="pagination center-align">
@@ -503,9 +506,21 @@
 
 <!-- Custom Script -->
 <script>
-  $('[data-activates=category-filter]').sideNav({
-    menuWidth: 280,
-    edge: 'right',
+  $(window).on('resize load', function() {
+    if ($(window).width() > 600) {
+      $('[data-activates=category-filter]').addClass('hide').sideNav('destroy')
+      $('#category-filter')
+        .addClass('col s12 m4 l3')
+        .removeClass('side-nav')
+        .css('width', '')
+        .css('transform', '')
+    } else {
+      $('[data-activates=category-filter]').removeClass('hide').sideNav({
+        menuWidth: 280,
+        edge: 'right',
+      })
+      $('#category-filter').removeClass('col s12 m4 l3').addClass('side-nav')
+    }
   })
 
   $('.collapsible').collapsible()

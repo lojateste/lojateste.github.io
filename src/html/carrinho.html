@@ -228,6 +228,8 @@
                 R$ <span data-value="149,97" class="price">149,97</span> ou
                 <br>R$ <span data-value="141,97" class="cash-price">141,97</span> à vista
               </div>
+
+              <a href="#discount-coupom" class="col grey-text text-darken-3 s12 modal-trigger right-align">Adicionar Cupom</a>
             </div>
           </div>
         </div>
@@ -288,6 +290,23 @@
           <a class="modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
           <!-- <a class="modal-action modal-close waves-effect waves-red btn-flat">Fechar</a> -->
         </div>
+      </div>
+      <!-- Modal -->
+
+      <!-- Modal -->
+      <div id="discount-coupom" class="modal">
+        <form>
+          <div class="modal-content">
+            <div class="input-field">
+              <input id="coupom-code" name="coupom-code" type="text" required>
+              <label for="coupom-code">Cupom Desconto</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="modal-action waves-effect waves-green btn-flat">Enviar</button>
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
+          </div>
+        </form>
       </div>
       <!-- Modal -->
 
@@ -476,7 +495,7 @@
 
   }
 
-  // Gatihlos do Owl carousel
+  // Gatilhos do Owl carousel
   $('.materialboxed').materialbox()
 
   $('.modal').modal()
@@ -513,6 +532,18 @@
     return Math.floor(value / 100) + ((value % 100 > 9) ? ',' + value % 100 : ',0' + value % 100)
   }
 
+  // Cupom Desconto
+  let discountValue = 0
+  $('#discount-coupom form').submit(function(event){
+    event.preventDefault()
+    $('#coupom-code').val('')
+    // TODO: pegar dados de uma API
+    discountValue = 0.10
+    $('.product-final-info .modal-trigger[href="#discount-coupom"]').html(discountValue * 100 + '% de desconto')
+    $('#discount-coupom').modal('close')
+    refreshTotalValue()
+  })
+
   function refreshTotalValue() {
     let freightPrice = $('.product-freight .freight-value')
     freightPrice = parseInt(freightPrice.text().replace(',', '').replace('R$', ''))
@@ -525,7 +556,7 @@
     totalValueArray.each(function(index, item) {
       totalValue += parseInt(($(item).text()).replace(',', ''))
     })
-    totalValue += freightPrice
+    totalValue = Math.round((totalValue + freightPrice) * (1 - discountValue))
     $('.product-final-info .price').html('R$ ' + formatBRL(totalValue))
 
 
@@ -534,7 +565,7 @@
     cashValueArray.each(function(index, item) {
       cashValue += parseInt(($(item).text()).replace(',', ''))
     })
-    cashValue += freightPrice
+    cashValue = Math.round((cashValue + freightPrice) * (1 - discountValue))
     $('.product-final-info .cash-price').html('R$ ' + formatBRL(cashValue))
   }
 
