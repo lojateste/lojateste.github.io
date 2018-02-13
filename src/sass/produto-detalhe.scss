@@ -3,9 +3,6 @@
 @import 'owl.carousel.scss';
 @import 'main';
 
-.back-layer {
-  z-index: -1000 !important;
-}
 
 .share-buttons {
   position: absolute;
@@ -194,7 +191,3 @@
     }
   }
 }
-//
-// MEDIA QUERIES
-//
-@media #{$small-and-down} {}

@@ -91,13 +91,13 @@
           <div class="product-images col s12 m8 offset-m2 l8">
             <div class="owl-carousel owl-theme product-images-carousel">
               <div>
-                <img src="img/products/1-CAPANOTEBOOK.jpg" alt="" class="materialboxed">
+                <a data-fancybox="gallery" href="img/products/1-CAPANOTEBOOK.jpg"><img src="img/products/1-CAPANOTEBOOK.jpg"></a>
               </div>
               <div>
-                <img src="img/products/2-CAPANOTEBOOK.jpg" alt="" class="materialboxed">
+                <a data-fancybox="gallery" href="img/products/2-CAPANOTEBOOK.jpg"><img src="img/products/2-CAPANOTEBOOK.jpg"></a>
               </div>
               <div>
-                <img src="img/products/3-CAPANOTEBOOK.jpg" alt="" class="materialboxed">
+                <a data-fancybox="gallery" href="img/products/3-CAPANOTEBOOK.jpg"><img src="img/products/3-CAPANOTEBOOK.jpg"></a>
               </div>
             </div>
 
@@ -393,7 +393,13 @@
 
 <!-- Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+
+<!-- JQuery Mask -->
 <script src="js/jquery.mask.min.js"></script>
+
+<!-- FancyBox -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <!-- OwlCarousel -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
@@ -403,6 +409,27 @@
 
 <!-- Custom Script -->
 <script>
+
+  // Configurações da FancyBox
+  $("[data-fancybox]").fancybox({
+    lang: 'pt',
+    i18n: {
+      'pt': {
+        CLOSE       : 'Fechar',
+        NEXT        : 'Próximo',
+        PREV        : 'Anterior',
+        ERROR       : 'O conteúdo não pôde ser carregado. <br/> Por favor, tente novamente mais tarde.',
+        PLAY_START  : 'Começar slideshow',
+        PLAY_STOP   : 'Parar slideshow',
+        FULL_SCREEN : 'Tela cheia',
+        THUMBS      : 'Miniaturas',
+        DOWNLOAD    : 'Download',
+        SHARE       : 'Compartilhar',
+        ZOOM        : 'Zoom'
+      }
+    }
+  });
+
   // Gatilho do JQuery mask
   $('#user-cep').mask('00000-000')
 
@@ -426,19 +453,6 @@
   // Gatilhos do Materialize
   let removeBackLayerInterval
   $('.materialboxed').materialbox()
-  $('.materialboxed').click(function() {
-    $('.materialboxed:not(.active)').closest('.owl-item').addClass('back-layer')
-    $('.nav-wrapper, .btn, .btn-floating').addClass('back-layer')
-    $('.owl-carousel:not(.product-images-carousel)').addClass('back-layer')
-    removeBackLayerInterval = setInterval(removeBackLayerClass, 100)
-  })
-
-  function removeBackLayerClass() {
-    if (!$('#materialbox-overlay').length) {
-      $('.back-layer').removeClass('back-layer')
-      clearInterval(removeBackLayerInterval)
-    }
-  }
 
   $('.modal').modal()
 
@@ -449,7 +463,6 @@
 
   // Gatilhos do Owl carousel
   $('.owl-carousel.product-images-carousel').owlCarousel({
-    loop: true,
     margin: 10,
     dots: true,
     responsive: {
