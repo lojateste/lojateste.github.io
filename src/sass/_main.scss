@@ -335,5 +335,17 @@ label {
       }
     }
   }
+
+  .home-btn{
+    .btn{
+      transform: scale(1.5) !important;
+    }
+  }
 }
-@media #{$large-and-up} {}
+@media #{$large-and-up} {
+  .home-btn{
+    .btn{
+      transform: scale(1.7) !important;
+    }
+  }
+}
