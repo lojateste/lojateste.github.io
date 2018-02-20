@@ -338,14 +338,14 @@ label {
 
   .home-btn{
     .btn{
-      transform: scale(1.5) !important;
+      transform: scale(1.75) translateY(2px) !important
     }
   }
 }
 @media #{$large-and-up} {
   .home-btn{
     .btn{
-      transform: scale(1.7) !important;
+      transform: scale(1.75) !important
     }
   }
 }
