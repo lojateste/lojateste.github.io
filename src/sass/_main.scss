@@ -230,12 +230,14 @@ label {
 .product-card {
   @extend .card;
   @extend .hoverable;
+  box-shadow: none;
 
   .owl-carousel & {
     margin: 1rem 0.5rem;
   }
 
   .card-image {
+    padding: 24px;
     color: #444;
   }
 
@@ -251,6 +253,12 @@ label {
   .card-content {
     color: #444;
     position: relative;
+    padding-top: 0;
+  }
+
+  &.horizontal .card-content{
+    padding-top: 24px;
+    padding-left: 0;
   }
 
   .product-price {
