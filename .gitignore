@@ -1,4 +1,3 @@
-node-modules/
 .sass-cache/
-*.css.map/
+*.css.map
 init.sh
