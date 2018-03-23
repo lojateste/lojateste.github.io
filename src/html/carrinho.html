@@ -4,6 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="css/carrinho.css">
   <title>Vip Informática</title>
 </head>
 
@@ -46,12 +47,12 @@
             </button>
           </form>
           <ul class="search-list">
-            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
-            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
-            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
-            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
-            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
-            <li><a href="">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="#">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="#">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="#">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="#">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="#">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
+            <li><a href="#">Smart TV LED 42" LG 4k/Ultra HD 43UJ6565</a></li>
           </ul>
         </li>
 
@@ -448,7 +449,7 @@
     <div class="container">
       <strong>Precisa de ajuda?</strong><br><br>
       <span>Atendimento por e-mail, telefone e dúvidas frequentes.</span>
-      <a href="">Clique aqui.</a><br>
+      <a href="#">Clique aqui.</a><br>
       <hr>
 
       <strong>Conecte-se conosco</strong><br>
@@ -480,8 +481,6 @@
 </body>
 
 
-<!-- CSS -->
-<link type="text/css" rel="stylesheet" href="css/carrinho.css">
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
@@ -559,7 +558,7 @@
 
   // Cupom Desconto
   let discountValue = 0
-  $('#discount-coupom form').submit(function(event){
+  $('#discount-coupom form').submit(function(event) {
     event.preventDefault()
     $('#coupom-code').val('')
     // TODO: pegar dados de uma API
@@ -603,16 +602,16 @@
   })
 
   $('.set-freight').click(function() {
-    if($('#freight-opt-0:checked').length){
+    if ($('#freight-opt-0:checked').length) {
       $('#select-store').modal('open')
     }
     let value = $('#freight-info [name=freight]:checked').val()
     $('.product-freight .form-freight').addClass('hide')
     $('.product-freight .freight-info').removeClass('hide')
     $('.product-freight .user-cep').html($('#user-cep').val())
-    if(value != 0){
+    if (value != 0) {
       $('.product-freight .freight-value').html('R$ ' + value)
-    }else{
+    } else {
       $('.product-freight .freight-value').html('Grátis')
     }
     refreshTotalValue()
